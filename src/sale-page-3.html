@@ -1,0 +1,142 @@
+@@include('templates/head.html')
+@@include('templates/header.html')
+
+    
+    <main class="sale-page">
+        <section class="section">
+
+            <div class="steps step-3">
+
+                <div class="steps__lines">
+                    <div class="steps__main-line">
+                        <div class="steps__progress-line">
+
+                        </div>
+                        <div class="step-block active">
+                            <div class="step-block__value">Шаг 1</div>
+                        </div>
+                        <div class="step-block step-2 active">
+                            <div class="step-block__value">Шаг 2</div>
+                        </div>
+                        <div class="step-block step-3 active">
+                            <div class="step-block__value active">Шаг 3</div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <form action="#">
+                <h1 class="title-product sp mb-4">Завершающий этап</h1>
+
+                <div class="sp-inline-block mb-5 mb-hd-7">
+                    <div class="form-bg rounded-2 px-3 py-3 py-lg-4 px-lg-6 py-hd-6 px-hd-7">
+                                                
+                        <h3 class="sp-title-block  mb-4">К какой категории относится запрос?</h3>
+                        <p  class="sp-sublabel mb-4 ">Напишите заголовок для  вашего запроса. </p>
+                        <div class="sp-select-wrap ">
+                            <select name="query-category" id="query-category" class="js-choice"  >
+                                <option value="" selected>Категория</option>
+                                
+                                <option value="3D">3D</option>
+                                <option value="Аксессуар">Аксессуар</option>
+                                <option value="Реклама">Реклама</option>
+                                <option value="Животное">Животное</option>
+                                <option value="Аниме">Аниме</option>
+
+                                <option value="Искусство">Искусство</option>
+                                <option value="Персонаж">Персонаж</option>
+                                <option value="Архитектура">Архитектура</option>
+                                <option value="Бизнес">Бизнес</option>
+                                <option value="Мультфильм">Мультфильм</option>
+
+                                <option value="Знаменитость">Знаменитость</option>
+                                <option value="Чат-бот">Чат-бот</option>
+                                <option value="Тренер">Тренер</option>
+                                <option value="Код">Код</option>
+                                <option value="Напиток">Напиток</option>
+                                <option value="Рисунок">Рисунок</option>
+                                <option value="Копирайтинг">Копирайтинг</option>
+                                <option value="Киберпанк">Киберпанк</option>
+                                <option value="Мода">Мода</option>
+                                <option value="Финансы">Финансы</option>
+
+                                <option value="Еда">Еда</option>
+                                <option value="Развлечения">Развлечения</option>
+                                <option value="Игры">Игры</option>
+                                <option value="Стекло">Стекло</option>
+                                <option value="Здоровье">Здоровье</option>
+                                <option value="Иконки">Иконки</option>
+                                <option value="Идеи">Идеи</option>
+                                <option value="Иллюстрации">Иллюстрации</option>
+                                <option value="Интерьер">Интерьер</option>
+                                <option value="Украшения">Украшения</option>
+
+                                <option value="Пейзаж">Пейзаж</option>
+                                <option value="Логотип">Логотип</option>
+                                <option value="Маркетинг">Маркетинг</option>
+                            </select>
+                        </div>
+                        
+
+                        
+
+                    </div>
+                </div>
+
+                <div class="sp-block-980 mb-5 mb-hd-7">
+                    <div class="form-bg rounded-2 px-3 py-3 py-lg-4 px-lg-6 py-hd-6 px-hd-7">
+                        <h3 class="sp-title-block  mb-2 mb-lg-4">Напишите теги</h3>                        
+                        <label for="tags" class="sp-sublabel mb-2 mb-lg-3 ">Теги помогут покупателям находить ваш запрос.</label>
+                        <label for="tags" class="sp-label middle mb-2 mb-lg-3">Теги</label>
+                        
+                        <textarea name="tags" id="tags" class="sp-textarea small"></textarea>
+                    </div>
+                </div>
+
+
+                <div class="sp-inline-block mb-5 mb-hd-7">
+                    <div class="form-bg rounded-2 px-3 py-3 py-lg-4 px-lg-6 py-hd-6 px-hd-7">
+                        <p  class="sp-label middle mb-2 ">Ориентировочная цена</p>
+                        <p  class="sp-sublabel mb-2 ">Как вы думаете, какой должна быть цена этого запроса?</p>
+                        <div class="balance__curency-block sp-curency-block ">
+
+                            <label for="dollar" class="curreny-radio">
+                                <input type="radio" class="curreny-radio__radio" id="dollar" name="currency">
+                                <span class="curreny-radio__vis-radio"></span>
+                                <span class="curreny-radio__value">$</span>
+                            </label>
+        
+                            <label for="ruble" class="curreny-radio">
+                                <input type="radio" class="curreny-radio__radio" id="ruble" name="currency" checked="">
+                                <span class="curreny-radio__vis-radio"></span>
+                                <span class="curreny-radio__value">₽</span>
+                            </label>
+        
+                            <label for="euro" class="curreny-radio">
+                                <input type="radio" class="curreny-radio__radio" id="euro" name="currency">
+                                <span class="curreny-radio__vis-radio"></span>
+                                <span class="curreny-radio__value">€</span>
+                            </label>
+                            
+                            
+                        </div>
+
+
+                        <input type="text" class="sp-input price curency-input" name="price" >
+                    </div>
+                </div>
+
+
+                <div class="profile-btn-container">
+                    <button class="btn btn-orange px-sm-9">Далее</button>
+                </div>
+            </form>
+            
+            
+        </section>
+    </main>
+
+
+@@include('templates/footer.html')

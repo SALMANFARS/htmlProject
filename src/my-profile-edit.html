@@ -1,0 +1,305 @@
+@@include('templates/head.html')
+@@include('templates/header-authorized.html')
+
+    
+    <main class="content-page">
+        <section class="section">
+
+            <div class="e-profile-content ">
+
+                <div class="form-bg rounded-2 px-5 py-4 px-hd-9 py-hd-7">
+                    <div class="e-profile mb-6 mb-hd-8">
+                        <div class="e-profile__img me-7 me-xl-0 mb-xl-4">
+                            <div class=" ratio-img-1x1 rounded-round">
+                                <img src="assets/img/seller.png" alt="">
+                            </div>
+                        </div>
+                        
+    
+                        <div class="e-profile__data">
+                            <p class="e-profile__name">@Username</p>                            
+                        </div>    
+                        
+                    </div>
+                    <div class="profile-tabs">
+                        <label for="tab-1" class="radio-tab">
+                            <input type="radio" name="tab-radio" id="tab-1" checked value="0">
+                            <span>Профиль</span>
+                        </label>
+                        <label for="tab-2" class="radio-tab">
+                            <input type="radio" name="tab-radio" id="tab-2" value="1">
+                            <span>Уведомления</span>
+                        </label>
+                    </div>
+                </div>
+                
+                
+
+                <div  class="profile-settings">
+
+
+                    
+                    <form enctype="multipart/form-data" method="post" class="profile-settings__sheet">
+                        <div class="profile-settings__inner-sheet">
+                            <div class="mb-7 mb-lg-4">
+                                <p class="label-for-user-banner mb-4 mb-hd-7">Фото шапки профиля</p>
+                                <div class="user-banner e-profile-banner mb-4 mb-hd-6">
+                                    <img src="assets/img/user-banner.png" alt="" id="user-banner">
+                                </div>
+        
+                                <label for="file-banner" class="input-load-banner">
+                                    Загрузить
+                                    <input type="file" id="file-banner" name="user-banner" accept="image/png, image/jpeg" />
+                                </label>
+                            </div>
+                            
+                            
+    
+                            <div class="profile-settings__personal-data">
+                                
+                                <div class="ps-avatar-block mb-4">
+                                    <h3 class="profile-settings__block-title f-avatar mb-5">Фото профиля</h3>
+                                    <div class="ps-avatar mb-4">
+                                        <div class=" ratio-img-1x1 rounded-round " >
+                                            <img src="assets/img/seller.png" alt="" id="avatar-img">
+                                        </div>
+                                    </div>
+                                    
+                                    <label for="file-avatar" class="input-load-avatar">
+                                        Загрузить
+                                        <input type="file" id="file-avatar" name="user-avatar" accept="image/png, image/jpeg" />
+                                    </label>
+
+
+                                    <div class="profile-btn-container mt-9 logout-desk">
+                                        <a class="btn btn-outline-orange border-1 py-xl-2 px-xl-5" href="/logout">Выход</a>
+                                    </div>
+                                </div>
+    
+    
+                                <div class="ps-main">
+                                    <h3 class="profile-settings__block-title ps-1 mb-4 mb-xl-6">Личные данные</h3>
+    
+                                    <div class="profile-bg rounded-2 px-4 py-4 py-lg-4 py-hd-6 px-lg-6 px-hd-7 mb-5">
+    
+                                        <label for="nickname" class="profile-label mb-2 mb-hd-4">Имя пользователя</label>
+                                        <label for="nickname" class="profile-sublabel mb-3 mb-hd-4">Ваше уникальное имя пользователя отображается в FimdePrompt </label>
+    
+                                        <input type="text" class="profile-input" id="nickname" name="nickname" placeholder="Имя пользователя" value="@username" required minlength="8">
+                                    </div>
+    
+                                    <div class="profile-bg rounded-2 px-4 py-4 py-lg-4 py-hd-6 px-lg-6 px-hd-7 mb-5">
+                                        <label for="user-about-us" class="profile-label mb-2 mb-hd-4">О себе</label>
+                                        <label for="user-about-us" class="profile-sublabel mb-3 mb-hd-4">Расскажите о себе</label>
+                                        <textarea name="user-about-us" id="user-about-us" class="profile-textarea">Welcome!😉 I'm a prompt engineer and explorer of the big world of AI.👨‍💻 If you're looking to automate your business processes and make your life easier.</textarea>
+                                    </div>
+    
+                                    <div class="profile-bg rounded-2 px-4 py-4 py-lg-4 py-hd-6 px-lg-6 px-hd-7 mb-5">
+                                        <p class="profile-label mb-2 mb-hd-4">Сменить пароль</p>
+    
+                                        <div class="profile-btn-container">
+                                            <a href="change-password.html" class="btn btn-outline-orange border-1 py-xl-2 px-xl-5">Изменить</a>
+                                        </div>
+                                    </div>
+    
+                                    <div class="profile-bg rounded-2 px-4 py-4 py-lg-4 py-hd-6 px-lg-6 px-hd-7 mb-5">
+    
+                                        <label for="email" class="profile-label mb-2 mb-hd-4">Смена адреса электронной почты</label>
+                                        <label for="email" class="profile-sublabel mb-3 mb-hd-4">Ссылка для подтверждения почты будет отправлена  на новый адрес</label>
+    
+                                        <input type="email" class="profile-input" id="email" name="email" placeholder="Имя пользователя" required value="username@gmail.com">
+                                    </div>
+                                </div>
+
+                                <div class="profile-btn-container mb-5 save-sm">
+                                    <button class="btn btn-outline-orange border-1">Сохранить изменения</button>
+                                </div>
+                                
+                                <div class="remove-account-block px-4 py-4 py-lg-5 py-hd-7 px-lg-5 px-hd-7 rounded-2">
+                                    <p  class="profile-label mb-4">Удалить учетную запись</p>
+                                    <p  class="profile-sublabel mb-6">Как только вы удалите свою учетную запись, пути назад уже не будет, пожалуйста, будьте уверены.</p>
+                                    <div class="profile-btn-container">
+                                        <span class="btn btn-outline-orange border-1 px-xl-5 py-xl-1" data-hystmodal="#remove-account">Удалить аккаунт</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-btn-container mt-7 mob">
+                            <a class="btn btn-outline-orange border-1" href="/logout">Выход</a>
+                        </div>
+
+                        <div class="profile-btn-container save-large mt-6">
+                            <button class="btn btn-outline-orange border-1 px-4 py-xl-2">Сохранить изменения</button>
+                        </div>
+                    </form>
+
+                    <form enctype="multipart/form-data" method="post" class="profile-settings__sheet">
+                        <div class="profile-settings__inner-sheet px-4 py-5 py-md-7  py-xl-5 px-md-6  px-hd-12">
+                            
+                            <div class="profile-checks-options-list">
+                                <div class="profile-checks-title-line mb-xl-2">
+                                    <p>Настройки уведомлений</p>
+                                    <p class="text-center">E-mail</p>
+                                    <p class="text-center">Уведомления</p>
+                                </div>
+    
+                                <div class="profile-checks-line">
+                                    <p>Новые продажи</p>
+                                    <div class="profile-checkbox-container">
+                                        <label for="sales-email" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="sales-notice" id="sales-email" value="email"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>
+                                        </label>
+                                    </div>
+                                    <div class="profile-checkbox-container">
+                                        <label for="sales-alert" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="sales-notice" id="sales-alert" value="alert"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                        </label>
+                                    </div>
+    
+    
+                                </div>
+                                <div class="profile-checks-line">
+                                    <p>Новые лайки</p>
+                                    <div class="profile-checkbox-container">
+                                        <label for="likes-email" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="likes-notice" id="likes-email" value="email"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>
+                                        </label>
+                                    </div>
+                                    <div class="profile-checkbox-container">
+                                        <label for="likes-alert" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="likes-notice" id="likes-alert" value="alert"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                                <div class="profile-checks-line">
+                                    <p>Новые подписчики</p>
+                                    <div class="profile-checkbox-container">
+                                        <label for="subscribers-email" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="subscribers-notice" id="subscribers-email" value="email"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                    <div class="profile-checkbox-container">
+                                        <label for="subscribers-alert" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="subscribers-notice" id="subscribers-alert" value="alert"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="profile-checks-line">
+                                    <p>Новый отзыв</p>
+                                    <div class="profile-checkbox-container">
+                                        <label for="review-email" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="review-notice" id="review-email" value="email"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                    <div class="profile-checkbox-container">
+                                        <label for="review-alert" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="review-notice" id="review-alert" value="alert"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                                <div class="profile-checks-line">
+                                    <p>Напоминание оставить отзыв</p>
+                                    <div class="profile-checkbox-container">
+                                        <label for="review-memo-email" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="review-memo" id="review-memo-email" value="email"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                    <div class="profile-checkbox-container">
+                                        <label for="review-memo-alert" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="review-memo" id="review-memo-alert" value="alert"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="profile-checks-line">
+                                    <p>Ответ на отзыв</p>
+                                    <div class="profile-checkbox-container">
+                                        <label for="review-answer-email" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="review-answer" id="review-answer-email" value="email"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                    <div class="profile-checkbox-container">
+                                        <label for="review-answer-alert" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="review-answer" id="review-answer-alert" value="alert"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="profile-checks-line">
+                                    <p>Новые запросы от избранного пользователя</p>
+                                    <div class="profile-checkbox-container">
+                                        <label for="new-query-email" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="new-query" id="new-query-email" value="email"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                    <div class="profile-checkbox-container">
+                                        <label for="new-query-alert" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="new-query" id="new-query-alert" value="alert"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="profile-btn-container mt-10">
+                            <button class="btn btn-outline-orange border-1 px-6 mx-sm-auto">Сохранить изменения</button>
+                        </div>
+                    </form>
+
+                    
+                    
+                </div>
+
+
+
+            </div>
+
+        </section>
+
+        
+    </main>
+
+
+
+    <div class="hystmodal" id="remove-account" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window remove-account" role="dialog" aria-modal="true">                
+                <h1 class="title no-underline mb-5 mb-lg-6 mb-hd-9">Вы дейстивтельно хотите удалить профиль? </h1>
+                <button class="btn btn-danger border-1 w-100 mb-5 mb-hd-7" data-remove-account>Удалить</button>
+                <button class="btn btn-white border-1 w-100" data-hystclose>Отмена</button>
+            </div>
+        </div>
+    </div>
+    
+    
+@@include('templates/footer.html')

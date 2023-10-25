@@ -1,0 +1,93 @@
+@@include('templates/head.html')
+@@include('templates/header.html')
+
+    
+    <main class="forms-page">
+        
+        <form action="#" class="cahs-in-grid ">
+
+           <div >
+                <h1 class="form-title cash-in-title mb-4 mb-md-6 mb-lg-6">Пополнение баланса</h1>
+                
+                <div class="form-input-block mb-3 mb-lg-5">
+                    <label for="card-number" class="form-label">Номер карты</label>
+                    <div class="form-input-wrap">                        
+                        <input type="text" class="input" id="card-number" name="card-number" placeholder="0000 0000 0000 0000" required minlength="19">
+                    </div>
+                </div>
+
+                <div class="form-input-block mb-3 mb-lg-5">
+                    <label for="name" class="form-label">Имя держателя карты</label>
+                    <div class="form-input-wrap">                        
+                        <input type="text" class="input" id="name" name="name" placeholder="Имя Фамилия" required >
+                    </div>
+                </div>
+
+                <div class="inputs-container-2 mb-3 mb-lg-7">
+                    <div class="form-input-block ">
+                        <label for="card-date" class="form-label">Срок</label>
+                        <div class="form-input-wrap">                        
+                            <input type="text" class="input" id="card-date" name="card-date" placeholder="MM / YY" required >
+                        </div>
+                    </div>
+    
+                    <div class="form-input-block ">
+                        <label for="cvc" class="form-label">CVC</label>
+                        <div class="form-input-wrap">                        
+                            <input type="password" class="input" id="cvc" name="cvc" placeholder="CVC" required maxlength="3">
+                        </div>
+                    </div>
+                </div>
+
+
+                
+                <div class="mb-5 mb-lg-7">
+                    <label for="save-data" class="custom-filter-checkbox">
+                        <input type="checkbox" name="save-data" id="save-data"  class="custom-filter-checkbox__checkbox" checked >
+
+                        <span class="v-checkbox form-checkbox"></span>
+                                                                            
+                        <span class="custom-filter-checkbox__text">Запомнить данные для следующих покупок</span>                                                        
+                    </label>
+                </div>
+                <button class="form-submit mb-5 mb-lg-9" >
+                    Оплатить 1240 ₽ 
+                </button>
+           </div>
+
+           <div class="cashing-card-imgs-block">
+                <div class="cashing-card-img">
+                    <img src="assets/img/cash-in/card.svg" alt="">
+                </div>
+
+                <div class="cashing-card-types">
+                    <div>
+                        <img src="assets/img/cash-in/pci.svg" alt="">
+                    </div>
+                    <div>
+                        <img src="assets/img/cash-in/visa.svg" alt="">
+                    </div>
+                    <div>
+                        <img src="assets/img/cash-in/mastecard.svg" alt="">
+                    </div>
+                    <div>
+                        <img src="assets/img/cash-in/mir.svg" alt="">
+                    </div>
+                    
+                </div>
+           </div>
+            
+
+           
+
+            
+            
+        </form>
+        
+            
+        
+        
+    </main>
+
+
+@@include('templates/footer.html')

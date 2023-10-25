@@ -1,0 +1,207 @@
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__left">
+                <a href="index.html" class="header__logo">
+                    <picture>
+                        <source srcset="assets/img/logo.svg" media="(min-width: 768px)">
+                        <img src="assets/img/mobile-logo.svg" alt="">
+                    </picture>
+                </a>
+
+                <form action="search.html" class="h-search-form">
+                    <input type="text" name="query" required class="h-search-form__input" placeholder="Поиск">
+                    <button class="h-search-form__submit">
+                        <img src="assets/img/icons/search.svg" alt="">
+                    </button>
+
+                    <div class="search-hints">
+                    
+                        <div class="search-hint">High Quality Cartoon Cat And Dog Animals</div>
+                        <div class="search-hint">Cartoon Vector-like Stickers</div>
+                        <div class="search-hint">Cartoonish Illustrations</div>
+                        <div class="search-no-result">
+                            Поиск не дал результатов
+                        </div>
+                    </div>
+                    <div class="h-search-form__fog"></div>
+                </form>
+
+            </div>
+
+            <nav class="h-menu">
+                <ul class="h-menu__list">
+                    <li class="h-menu__item"><a href="catalog.html" class="h-menu__link">Маркетплейс</a></li>
+                    <li class="h-menu__item"><a href="messages.html" class="h-menu__link">Чат</a></li>
+                    <li class="h-menu__item"><a href="favorites.html" class="h-menu__link">Избранное</a></li>
+                    <li class="h-menu__item"><a href="sale-page-1.html" class="h-menu__link">Продать</a></li>                       
+                </ul>
+            </nav>
+
+            <div class="user-controls">
+
+                <!-- 
+                    шаблон выпадающего меню находится в контейнере с классом tippy-templates
+                    при выборе пугкта меню генерируется пользовательское событие changeCurrency см. main.js                
+                -->
+                
+                <button class="h-dropdown" data-template="currency-drop-list"  data-type="currency">
+                    <span class="h-dropdown__current">USD</span>
+                    <img src="assets/img/icons/arrow-dropdown.svg" alt="">
+                </button>
+                <!-- 
+                    шаблон выпадающего меню находится в контейнере с классом tippy-templates
+                    при выборе пугкта меню генерируется пользовательское событие changeLang см. main.js                
+                -->
+                <button class="h-dropdown" data-template="lang-drop-list"  data-type="lang">
+                    <span class="h-dropdown__current">RU</span>
+                    <img src="assets/img/icons/arrow-dropdown.svg" alt="">
+                </button>
+
+
+                <div class="user-alert">
+                    <button class="h-alert">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.75C15.4518 2.75 18.25 5.54821 18.25 9V18.25H5.75V9C5.75 5.54821 8.54821 2.75 12 2.75ZM19.75 18.25V9C19.75 4.71979 16.2802 1.25 12 1.25C7.71979 1.25 4.25 4.71979 4.25 9V18.25H2C1.58579 18.25 1.25 18.5858 1.25 19C1.25 19.4142 1.58579 19.75 2 19.75H22C22.4142 19.75 22.75 19.4142 22.75 19C22.75 18.5858 22.4142 18.25 22 18.25H19.75Z" fill="white"/>
+                            <path d="M8.75 19C8.75 18.5858 9.08579 18.25 9.5 18.25H14.5C14.9142 18.25 15.25 18.5858 15.25 19V19.5C15.25 21.2949 13.7949 22.75 12 22.75C10.2051 22.75 8.75 21.2949 8.75 19.5V19ZM10.2677 19.75C10.389 20.5981 11.1184 21.25 12 21.25C12.8816 21.25 13.611 20.5981 13.7323 19.75H10.2677Z" fill="white"/>
+                        </svg>
+    
+                        <span class="h-alert__qty">
+                            <span class="h-alert__qty-num">1</span>                        
+                        </span>
+                    </button>
+    
+
+                    <div class="alert-container">
+                        <ul class="alert-messages">
+                            <li class="alert-messages__setting">
+                                <a href="my-profile-edit.html">
+                                    <img src="assets/img/icons/config.svg" alt="" width="24" height="24">
+                                </a>
+                                </button>
+                                <button class="volume-settings">
+                                    
+                                </button>
+
+                                <button class="alert-messages__hide">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="white"/>
+                                    </svg> 
+                                </button>
+                            </li>
+                            <li class="alert-messages__item">
+                                <a href="#" class="alert-messages__link">
+                                    <img src="assets/img/avatar-alert.png" alt="" class="alert-messages__avatar">
+                                    <div class="alert-messages__text-block">
+                                        <p class="alert-messages__message"><b>@username1</b> подписался на вас</p>
+                                        <p class="alert-messages__ago">3 минуты назад</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="alert-messages__item">
+                                <a href="#" class="alert-messages__link">
+                                    <img src="assets/img/avatar-alert.png" alt="" class="alert-messages__avatar">
+                                    <div class="alert-messages__text-block">
+                                        <p class="alert-messages__message"><b>@username1</b> купил ваш запрос</p>
+                                        <p class="alert-messages__ago">3 минуты назад</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="alert-messages__item">
+                                <a href="#" class="alert-messages__link">
+                                    <img src="assets/img/avatar-alert.png" alt="" class="alert-messages__avatar">
+                                    <div class="alert-messages__text-block">
+                                        <p class="alert-messages__message"><b>@username1</b> оставил отзыв</p>
+                                        <p class="alert-messages__ago">3 минуты назад</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="alert-messages__item">
+                                <a href="#" class="alert-messages__link">
+                                    <img src="assets/img/avatar-alert.png" alt="" class="alert-messages__avatar">
+                                    <div class="alert-messages__text-block">
+                                        <p class="alert-messages__message">Модерация успешно пройдена</p>
+                                        <p class="alert-messages__ago">3 минуты назад</p>
+                                    </div>
+                                </a>
+                            </li>
+                            
+
+                           
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-dropmenu" data-template="profile-drop-list">
+                    <button class="profile-btn">
+                        <img src="assets/img/icons/user.svg" alt="" class="profile-btn__icon">
+                        <img src="assets/img/icons/arrow-dropdown.svg" alt="">
+                    </button>
+
+                    <div class="profile-dropmenu__fog"></div>
+                </div>
+                
+
+                <button class="hamburger"><img src="assets/img/hamburger.svg" alt=""></button>
+            </div>
+        </div>
+
+        
+    </header>
+
+
+    <nav class="mob-menu">
+        <div class="mob-menu__inner">
+            <div class="mob-menu__header">
+                <div class="mob-menu__header--left-group">
+                    <a href="index.html" class="mob-menu__logo">
+                        <img src="assets/img/mobile-logo.svg" alt="" width="36" height="36">
+                    </a>
+
+                    <div class="mob-menu__header--drop-group">
+                        <!-- 
+                            шаблон выпадающего меню находится в контейнере с классом tippy-templates
+                            при выборе пугкта меню генерируется пользовательское событие changeCurrency см. main.js                
+                        -->
+                        
+                        <button class="h-dropdown" data-template="currency-drop-list"  data-type="currency">
+                            <span class="h-dropdown__current">USD</span>
+                            <img src="assets/img/icons/arrow-dropdown.svg" alt="">
+                        </button>
+                        <!-- 
+                            шаблон выпадающего меню находится в контейнере с классом tippy-templates
+                            при выборе пугкта меню генерируется пользовательское событие changeLang см. main.js                
+                        -->
+                        <button class="h-dropdown" data-template="lang-drop-list"  data-type="lang">
+                            <span class="h-dropdown__current">RU</span>
+                            <img src="assets/img/icons/arrow-dropdown.svg" alt="">
+                        </button>
+                    </div>
+                        
+                    
+                </div>
+
+                <button class="mob-menu__close" >
+                    <img src="assets/img/icons/close.svg" alt="" width="36" height="36">
+                </button>
+            </div>
+            <div class="mob-menu__body">
+                <ul class="mm-list">
+                    <li class="mm-list__item"><a href="my-profile.html" class="mm-list__link">Профиль</a></li>
+                    <li class="mm-list__item"><a href="balance.html" class="mm-list__link">Баланс - 130 $</a></li>
+                    <li class="mm-list__item"><a href="#" class="mm-list__link">Покупки</a></li>
+                    <li class="mm-list__item"><a href="catalog.html" class="mm-list__link">Маркетплейс</a></li>
+                    <li class="mm-list__item"><a href="messages.html" class="mm-list__link">Чат</a></li>
+                    <li class="mm-list__item"><a href="favorites.html" class="mm-list__link">Избранное</a></li>
+                    <li class="mm-list__item"><a href="sale-page-1.html" class="mm-list__link">Продать</a></li>
+                    <li class="mm-list__item"><a href="my-profile-edit.html" class="mm-list__link">Настройки</a></li>
+                    <li class="mm-list__item"><a href="#" class="mm-list__link">Выход</a></li>                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    @@include('tippy-templates.html')

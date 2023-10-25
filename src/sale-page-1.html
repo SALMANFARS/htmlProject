@@ -1,0 +1,91 @@
+@@include('templates/head.html')
+@@include('templates/header-authorized.html')
+
+    
+    <main class="sale-page">
+        <section class="section">
+
+            <div class="steps">
+
+                <div class="steps__lines">
+                    <div class="steps__main-line">
+                        <div class="steps__progress-line">
+
+                        </div>
+                        <div class="step-block active">
+                            <div class="step-block__value">Шаг 1</div>
+                        </div>
+                        <div class="step-block step-2 ">
+                            <div class="step-block__value">Шаг 2</div>
+                        </div>
+                        <div class="step-block step-3 ">
+                            <div class="step-block__value">Шаг 3</div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <form action="#">
+                <h1 class="title-product sp mb-4">Информация о запросе</h1>
+
+                
+                <div class="sp-block-69 mb-5  query-language-panel ">
+                    <div class="form-bg rounded-2 px-3 py-3 q-lang-container" data-template="hint-for-select-lang">
+                        <label for="query-lang-1" class="ql-radio-label me-4"  >
+                            <input type="radio" name="query-lang" value="rus" id="query-lang-1" checked >
+                            <span class="vis-value">РУС</span>
+                        </label>
+                        <label for="query-lang-2" class="ql-radio-label">
+                            <input type="radio" name="query-lang" value="eng" id="query-lang-2">
+                            <span class="vis-value">en</span>
+                        </label>
+                        
+                    </div>
+                </div>                
+
+                <div class="sp-block-69 mb-5 mb-lg-7">
+                    <div class="form-bg rounded-2 px-3 py-3 py-lg-4 px-lg-6 py-hd-6 px-hd-7">
+                        <h3 class="sp-title-block mb-3">Расскажите нам о запросе, который вы хотите продать.</h3>
+                        
+                        <div class="sp-select-wrap mb-3">
+                            <select name="query-type" id="query-type" class="js-choice" >
+                                <option value="" selected>Тип нейросети</option>
+                                
+                                <option value="GPT / ChatGPT">GPT / ChatGPT</option>
+                                <option value="DALL·E">DALL·E</option>
+                                <option value="Midjourney">Midjourney</option>
+                                <option value="Stable Diffusion">Stable Diffusion</option>
+                                <option value="Bard">Bard</option>
+                            </select>
+                        </div>
+                        
+
+                        <label for="query-title" class="sp-label mb-3 mb-xl-1">Имя</label>
+                        <label for="query-title" class="sp-sublabel mb-2 ">Напишите заголовок для  вашего запроса. </label>
+                        <input type="text" class="sp-input" id="query-title" name="query-title"  value="" required >
+
+                    </div>
+                </div>
+
+                <div class="sp-block-71 mb-5 mb-lg-6 mb-hd-7">
+                    <div class="form-bg rounded-2 px-3 py-3 py-lg-4 px-lg-6 py-hd-6 px-hd-7">
+                        <label for="desc-query" class="sp-label mb-3 mb-xl-1">Описание</label>
+                        <label for="desc-query" class="sp-sublabel mb-2 ">Опишите, что получит покупатель благодаря вашему запросу. Более подробное описание увеличит ваши продажи.</label>
+
+                        <textarea name="desc-query" id="desc-query" class="sp-textarea"></textarea>
+                    </div>
+                </div>
+
+                <div class="profile-btn-container">
+                    <button class="btn btn-orange px-sm-9">Далее</button>
+                </div>
+            </form>
+            
+            
+        </section>
+    </main>
+
+
+@@include('templates/footer.html')

@@ -1,0 +1,150 @@
+.faq{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+
+    @media (min-width: $lg){
+        grid-gap: 24px;
+    }
+    @media (min-width: $xl){
+        
+    }
+}
+
+.faq__group{
+    border-radius: 6px;
+    background: #291738; 
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+
+    @media (min-width: $md){
+        padding: 16px;
+        grid-gap: 16px;
+    }
+    @media (min-width: $lg){
+        border-radius: 12px;
+        padding: 24px;
+        grid-gap: 16px;
+    }
+    @media (min-width: $xl){
+        
+    }
+
+    .spoiler__header{
+        padding: 16px 28px;    
+    }
+}
+
+.spoiler{
+    border-radius: 6px;
+    background: #3D2E4A; 
+}
+
+.spoiler__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    cursor: pointer;
+
+    @media (min-width: $lg){
+        
+    }
+    @media (min-width: $hd){
+		.text-2{
+            font-size: 1.25vw;
+        }
+	}
+
+    @media (min-width: $hd){
+        padding: 0.833333333vw 1.458333333vw;
+    }
+
+    
+    .arrow{
+        flex-shrink: 0;
+        margin-left: 8px;
+        width: 24px;
+        height: 24px;
+        transition: 500ms;
+
+        @media (min-width: $lg){
+            width: 34px;
+            height: 34px;
+        }
+    }
+}
+.spoiler__header.spoiler__header_sp{
+    @media (min-width: $xl){
+        padding-left: 38px;
+        padding-right: 38px;
+        gap: 0 16px;
+    }
+}
+.spoiler__body{
+    height: 0;
+    overflow: hidden;
+    
+}
+
+
+.spoiler__content{
+    padding: 10px;
+    padding-top: 0;
+
+    @media (min-width: $lg){
+        padding: 16px 28px;
+        padding-top: 0;
+        .text-2{
+            font-size: 20px;
+        }
+    }
+
+    @media (min-width: $hd){
+        padding: 16px 28px;
+		.text-2{
+            font-size: 1.25vw;
+        }
+	}
+}
+
+
+.spoiler[data-state="deploy"], .spoiler[data-state="animated-deploy"]{
+    .arrow{
+        transform: rotate(180deg);
+    }
+}
+
+
+.spoiler__header{
+   
+}
+
+
+.spoiler.hint-for-brand{
+    background-color: transparent;
+
+    .arrow{
+        width: 20px;
+        height: 22px;
+        @media (min-width: $lg){
+            width: 29px;
+            height: 33px;
+        }
+        
+    }
+
+    .spoiler__header{
+        display: inline-flex;
+        gap: 0 0px;
+        border: 1px solid;
+    }
+
+    .spoiler__content{
+        padding: 20px 16px;
+        border: 1px solid;
+    }
+}

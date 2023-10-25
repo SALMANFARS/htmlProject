@@ -1,0 +1,35 @@
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+
+
+
+a{
+	text-decoration: none;
+	transition: 300ms;
+}
+path{
+	transition: 300ms;
+}
+
+ul{
+	list-style: none;
+}
+
+button{
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+input{
+	border: none;
+	outline: none;
+	font-family: 'Inter';
+}

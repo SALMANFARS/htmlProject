@@ -1,0 +1,1381 @@
+@@include('templates/head.html')
+@@include('templates/header.html')
+
+    <div class="catalog">
+        <div class="catalog__content">
+            <div class="catalog__title-block">
+                <h1 class="title">Самые популярные запросы</h1>
+            </div>
+    
+            <div class="mob-filter-products-panel">
+                <button class="show-products-filter">
+                    <img src="assets/img/icons/filter.svg" alt="" width="22" height="22">
+                    Фильтры                    
+                </button>
+
+                <div class="mobile-q-filters">
+                    <div class="mobile-q-filters__inner">
+                        <ul>
+                            <li class="q-filter q-filter-reset-all" >
+                                <span>Сбросить всё</span>
+                                <span class="q-filter__uncheck">
+
+                                    <img src="assets/img/icons/close-orange.svg" alt="">
+                                    
+                                </span>                                
+                            </li>
+
+                            <li class="q-filter q-tippy-filter" data-template="tippy-filters-container" data-list="neuronet-list">
+                                <span>Нейросеть</span>
+                                <span class="q-filter__uncheck">
+                                    <img src="assets/img/icons/arrow-dropdown.svg" alt="">
+                                </span>                                
+                            </li>
+                            <li class="q-filter q-tippy-filter"  data-template="tippy-filters-container" data-list="tags-list">
+                                <span>Теги</span>
+                                <span class="q-filter__uncheck">
+                                    <img src="assets/img/icons/arrow-dropdown.svg" alt="">
+                                </span>
+                                
+                            </li>
+                            <li class="q-filter q-tippy-filter" data-template="tippy-filters-container" data-list="category-list">
+                                <span>Категории</span>
+                                <span class="q-filter__uncheck">
+                                    <img src="assets/img/icons/arrow-dropdown.svg" alt="">
+                                </span>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <aside class="catalog__aside">
+                
+
+
+                <form class="filter-products">
+                    <div class="filter-products__inner">
+                        <div class="filter-products__header">
+                            <div class="filter-products__header--left">
+                                
+                                <button class="filter-products__hide">                                    
+                                    <img src="assets/img/icons/back-arrow.svg" alt="">
+                                </button>
+                                <h3 class="filter-products__main-title">                                    
+                                    Фильтры
+                                </h3>
+                            </div>
+                            
+                            <button class="filter-products__btn-reset" data-target="all">Сбросить все</button>
+                        </div>
+
+
+                        <div class="filter-products__body">
+
+                            <div class="filter-p-group">
+                                <div class="filter-p-group__header">
+                                    <div class="filter-p-group__header--left">
+                                        <h3 class="filter-p-group__title">Сортировка</h3>
+                                        <button class="filter-products__btn-reset" data-target="group">Сбросить</button>
+                                    </div>
+
+                                    <button class="filter-products__accordeon-btn">
+                                        <img src="assets/img/icons/arrow-dropdown.svg" alt="" width="24" height="24">
+                                    </button>
+                                </div>
+
+                                <div class="filter-p-group__body accordeon">
+                                    <div class="filter-p-group__body--inner">
+                                        <ul class="filter-checkbox-list">
+                                            <li>                                                
+                                                <label for="sort-by-all" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="sortBy[]" id="sort-by-all" value="all" data-role="default" class="custom-filter-checkbox__checkbox" checked>
+
+                                                    <span class="v-checkbox"></span>
+                                                    
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">Все</span>                                                        
+                                                </label>
+                                            </li>
+                                            <li>                                                
+                                                <label for="sort-by-popular" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="sortBy[]" id="sort-by-popular" value="popular" class="custom-filter-checkbox__checkbox" >
+
+                                                    <span class="v-checkbox"></span>
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">Популярные</span>                                                        
+                                                </label>
+                                            </li>
+
+                                            <li>                                                
+                                                <label for="sort-by-recomendated" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="sortBy[]" id="sort-by-recomendated" value="recomendated" class="custom-filter-checkbox__checkbox" >
+
+                                                    <span class="v-checkbox"></span>
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">Рекомендованные</span>                                                        
+                                                </label>
+                                            </li>
+
+                                            <li>                                                
+                                                <label for="sort-by-new" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="sortBy[]" id="sort-by-new" value="new" class="custom-filter-checkbox__checkbox" >
+
+                                                    <span class="v-checkbox"></span>
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">Новые</span>                                                        
+                                                </label>
+                                            </li>
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+
+
+                            <div class="filter-p-group">
+                                <div class="filter-p-group__header">
+                                    <div class="filter-p-group__header--left">
+                                        <h3 class="filter-p-group__title">Цена</h3>                                        
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="filter-p-group__body ">
+                                    <div class="filter-p-group__body--inner">
+
+                                        <div class="slider-range-values">
+                                            <div class="slider-range-values__box">
+                                                <span class="slider-range-values__prefix">от</span>
+                                                <span class="slider-range-values__min"></span>
+                                                <span class="slider-range-values__currency">$</span>
+                                            </div>
+                                            <div class="slider-range-values__box">
+                                                <span class="slider-range-values__prefix">до</span>
+                                                <span class="slider-range-values__max"></span>
+                                                <span class="slider-range-values__currency">$</span>
+                                            </div>
+                                        </div>
+                                        <div class="slider-styled" id="filter-prices" data-min="0"  data-max="500"></div>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+
+
+                            <div class="filter-p-group">
+                                <div class="filter-p-group__header">
+                                    <div class="filter-p-group__header--left">
+                                        <h3 class="filter-p-group__title">Нейросеть</h3>
+                                        <button class="filter-products__btn-reset" data-target="group">Сбросить</button>
+                                    </div>
+
+                                    <button class="filter-products__accordeon-btn">
+                                        <img src="assets/img/icons/arrow-dropdown.svg" alt="" width="24" height="24">
+                                    </button>
+                                </div>
+
+                                <div class="filter-p-group__body accordeon">
+
+                                    <div class="filter-p-group__body--inner" id="neuronet-list">
+                                        <ul class="filter-checkbox-list" >
+                                            <li>                                                
+                                                <label for="neuronet-all" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="neuronet[]" id="neuronet-all" value="all" data-role="default" class="custom-filter-checkbox__checkbox" checked>
+
+                                                    <span class="v-checkbox"></span>
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">Все</span>                                                        
+                                                </label>
+                                            </li>
+                                            <li>                                                
+                                                <label for="neuronet-1" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="neuronet[]" id="neuronet-1" value="DALL·E" class="custom-filter-checkbox__checkbox" >
+
+                                                    <span class="v-checkbox"></span>
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">DALL·E</span>                                                        
+                                                </label>
+                                            </li>
+
+                                            <li>                                                
+                                                <label for="neuronet-2" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="neuronet[]" id="neuronet-2" value="Midjourney" class="custom-filter-checkbox__checkbox" >
+
+                                                    <span class="v-checkbox"></span>
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">Midjourney</span>                                                        
+                                                </label>
+                                            </li>
+
+
+                                            <li>                                                
+                                                <label for="neuronet-3" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="neuronet[]" id="neuronet-3" value="GPT" class="custom-filter-checkbox__checkbox" >
+
+                                                    <span class="v-checkbox"></span>
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">GPT</span>                                                        
+                                                </label>
+                                            </li>
+
+                                            <li>                                                
+                                                <label for="neuronet-4" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="neuronet[]" id="neuronet-4" value="Stable Diff." class="custom-filter-checkbox__checkbox" >
+
+                                                    <span class="v-checkbox"></span>
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">Stable Diff.</span>                                                        
+                                                </label>
+                                            </li>
+                                            <li>                                                
+                                                <label for="neuronet-5" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="neuronet[]" id="neuronet-5" value="Bard" class="custom-filter-checkbox__checkbox" >
+
+                                                    <span class="v-checkbox"></span>
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">Bard</span>                                                        
+                                                </label>
+                                            </li>
+
+                                            <li class="pt-6 filter-catalog-apply">                                                
+                                                <button class="btn btn-orange w-100 py-1">Применить</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+
+                            <div class="filter-p-group">
+                                <div class="filter-p-group__header">
+                                    <div class="filter-p-group__header--left">
+                                        <h3 class="filter-p-group__title">Теги</h3>
+                                        <button class="filter-products__btn-reset" data-target="group">Сбросить</button>
+                                    </div>
+
+                                    <button class="filter-products__accordeon-btn">
+                                        <img src="assets/img/icons/arrow-dropdown.svg" alt="" width="24" height="24">
+                                    </button>
+                                </div>
+
+                                <div class="filter-p-group__body accordeon">
+                                    <div class="filter-p-group__body--inner" id="tags-list">
+
+                                        <div class="filter-p-group__search-wrap">
+                                            <input type="text" class="filter-p-group__search-input" name="filter-query" placeholder="Поиск">
+                                            <button class="filter-p-group__btn-search">
+                                                <img src="assets/img/icons/search-white.svg" alt="">
+                                            </button>
+                                        </div>
+
+                                        <ul class="filter-checkbox-list">
+                                            <li>                                                
+                                                <label for="tags-all" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="tags[]" id="tags-all" value="all" data-role="default" class="custom-filter-checkbox__checkbox" checked>
+
+                                                    <span class="v-checkbox"></span>
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">Все</span>                                                        
+                                                </label>
+                                            </li>
+                                            <li>                                                
+                                                <label for="tags-1" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="tags[]" id="tags-1" value="IG" class="custom-filter-checkbox__checkbox" >
+
+                                                    <span class="v-checkbox"></span>
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">IG</span>                                                        
+                                                </label>
+                                            </li>
+
+                                            <li>                                                
+                                                <label for="tags-2" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="tags[]" id="tags-2" value="Online" class="custom-filter-checkbox__checkbox" >
+
+                                                    <span class="v-checkbox"></span>
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">Online</span>                                                        
+                                                </label>
+                                            </li>
+
+                                            <li>                                                
+                                                <label for="tags-3" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="tags[]" id="tags-3" value="Love" class="custom-filter-checkbox__checkbox" >
+
+                                                    <span class="v-checkbox"></span>
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">Love</span>                                                        
+                                                </label>
+                                            </li>
+
+                                            <li>                                                
+                                                <label for="tags-4" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="tags[]" id="tags-4" value="Gift" class="custom-filter-checkbox__checkbox" >
+
+                                                    <span class="v-checkbox"></span>
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">Gift</span>                                                        
+                                                </label>
+                                            </li>
+
+                                            <li>                                                
+                                                <label for="tags-5" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="tags[]" id="tags-5" value="Ai" class="custom-filter-checkbox__checkbox" >
+
+                                                    <span class="v-checkbox"></span>
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">Ai</span>                                                        
+                                                </label>
+                                            </li>
+
+                                            <div class="filter-roll-block" data-state="rolled">
+                                                <div class="filter-roll-block__content">
+                                                    <div class="filter-roll-block__content--inner">
+                                                        <li>                                                
+                                                            <label for="tags-6" class="custom-filter-checkbox">
+                                                                <input type="checkbox" name="tags[]" id="tags-6" value="Скрытое значение 1" class="custom-filter-checkbox__checkbox" >
+            
+                                                                <span class="v-checkbox"></span>
+                                                                                                                     
+                                                                <span class="custom-filter-checkbox__text">Скрытое значение 1</span>                                                        
+                                                            </label>
+                                                        </li>
+            
+                                                        <li>                                                
+                                                            <label for="tags-7" class="custom-filter-checkbox">
+                                                                <input type="checkbox" name="tags[]" id="tags-7" value="Скрытое значение 2" class="custom-filter-checkbox__checkbox" >
+            
+                                                                <span class="v-checkbox"></span>
+                                                                                                                     
+                                                                <span class="custom-filter-checkbox__text">Скрытое значение 2</span>                                                        
+                                                            </label>
+                                                        </li>
+
+                                                        <li>                                                
+                                                            <label for="tags-8" class="custom-filter-checkbox">
+                                                                <input type="checkbox" name="tags[]" id="tags-8" value="Скрытое значение 3" class="custom-filter-checkbox__checkbox" >
+            
+                                                                <span class="v-checkbox"></span>
+                                                                                                                     
+                                                                <span class="custom-filter-checkbox__text">Скрытое значение 3</span>                                                        
+                                                            </label>
+                                                        </li>
+                                                    </div>
+                                                </div>
+                                                <button class="filter-roll-block__btn">
+                                                    <span class="filter-roll-block__show-text">Показать все</span>
+                                                    <span class="filter-roll-block__hide-text">Свернуть</span>
+                                                </button>
+                                            </div>
+
+                                            <li class="pt-6 filter-catalog-apply">                                                
+                                                <button class="btn btn-orange w-100 py-1">Применить</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+
+                            <div class="filter-p-group">
+                                <div class="filter-p-group__header">
+                                    <div class="filter-p-group__header--left">
+                                        <h3 class="filter-p-group__title">Категории</h3>
+                                        <button class="filter-products__btn-reset" data-target="group">Сбросить</button>
+                                    </div>
+
+                                    <button class="filter-products__accordeon-btn">
+                                        <img src="assets/img/icons/arrow-dropdown.svg" alt="" width="24" height="24">
+                                    </button>
+                                </div>
+
+                                <div class="filter-p-group__body accordeon">
+                                    <div class="filter-p-group__body--inner" id="category-list">
+
+                                        
+                                        <ul class="filter-checkbox-list">
+                                            <li>                                                
+                                                <label for="categories-all" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="categories[]" id="categories-all" value="all" data-role="default" class="custom-filter-checkbox__checkbox" checked>
+
+                                                    <span class="v-checkbox"></span>
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">Все</span>                                                        
+                                                </label>
+                                            </li>
+                                            <li>                                                
+                                                <label for="categories-1" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="categories[]" id="categories-1" value="3D" class="custom-filter-checkbox__checkbox" >
+
+                                                    <span class="v-checkbox"></span>
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">3D</span>                                                        
+                                                </label>
+                                            </li>
+
+                                            <li>                                                
+                                                <label for="categories-2" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="categories[]" id="categories-2" value="Аксессуар" class="custom-filter-checkbox__checkbox" >
+
+                                                    <span class="v-checkbox"></span>
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">Аксессуар</span>                                                        
+                                                </label>
+                                            </li>
+
+                                            <li>                                                
+                                                <label for="categories-3" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="categories[]" id="categories-3" value="Реклама" class="custom-filter-checkbox__checkbox" >
+
+                                                    <span class="v-checkbox"></span>
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">Реклама</span>                                                        
+                                                </label>
+                                            </li>
+
+                                            <li>                                                
+                                                <label for="categories-4" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="categories[]" id="categories-4" value="Животное" class="custom-filter-checkbox__checkbox" >
+
+                                                    <span class="v-checkbox"></span>
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">Животное</span>                                                        
+                                                </label>
+                                            </li>
+
+                                            <li>                                                
+                                                <label for="categories-5" class="custom-filter-checkbox">
+                                                    <input type="checkbox" name="categories[]" id="categories-5" value="Аниме" class="custom-filter-checkbox__checkbox" >
+
+                                                    <span class="v-checkbox"></span>
+                                                                                                         
+                                                    <span class="custom-filter-checkbox__text">Аниме</span>                                                        
+                                                </label>
+                                            </li>
+
+                                            <div class="filter-roll-block" data-state="rolled">
+                                                <div class="filter-roll-block__content">
+                                                    <div class="filter-roll-block__content--inner">
+                                                        <li>                                                
+                                                            <label for="categories-6" class="custom-filter-checkbox">
+                                                                <input type="checkbox" name="categories[]" id="categories-6" value="Искусство" class="custom-filter-checkbox__checkbox" >
+            
+                                                                <span class="v-checkbox"></span>
+                                                                                                                     
+                                                                <span class="custom-filter-checkbox__text">Искусство</span>                                                        
+                                                            </label>
+                                                        </li>
+            
+                                                        <li>                                                
+                                                            <label for="categories-7" class="custom-filter-checkbox">
+                                                                <input type="checkbox" name="categories[]" id="categories-7" value="Персонаж" class="custom-filter-checkbox__checkbox" >
+            
+                                                                <span class="v-checkbox"></span>
+                                                                                                                     
+                                                                <span class="custom-filter-checkbox__text">Персонаж</span>                                                        
+                                                            </label>
+                                                        </li>
+
+                                                        <li>                                                
+                                                            <label for="categories-8" class="custom-filter-checkbox">
+                                                                <input type="checkbox" name="categories[]" id="categories-8" value="Архитектура" class="custom-filter-checkbox__checkbox" >
+            
+                                                                <span class="v-checkbox"></span>
+                                                                                                                     
+                                                                <span class="custom-filter-checkbox__text">Архитектура</span>                                                        
+                                                            </label>
+                                                        </li>
+                                                        
+                                                    </div>
+
+                                                    
+                                                </div>
+                                                <button class="filter-roll-block__btn">
+                                                    <span class="filter-roll-block__show-text">Показать все</span>
+                                                    <span class="filter-roll-block__hide-text">Свернуть</span>
+                                                </button>
+                                            </div>
+                                            <li class="pt-6 filter-catalog-apply">                                                
+                                                <button class="btn btn-orange w-100 py-1">Применить</button>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+
+
+                        
+                    </div>
+                    <div class="pt-5 pb-5">
+                        <button class="btn btn-orange w-100 ">Применить</button>
+                    </div>
+                </form>
+            </aside>
+
+
+            <main class="catalog__main">
+                <div class="products-list">
+                    <a class="product-card" href="#">
+
+                        <div class="prop-container-100">
+                            <div class="prop-container-100__inner">
+                                <div class="prop-container-100__content">
+
+                                    <div class="product-card-gallery">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/1.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/3.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/4.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        <div class="product-card-gallery__pagination">
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__text-content">
+                            <div class="product-card__info-labels">
+                                <div class="product-card__rating-label">
+                                    <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                    <span class="product-card__rating-value">5.0</span>
+                                </div>
+                                <div class="product-card__category-label bg-pink">
+                                    <img src="assets/img/icons/categories/chatGPT.svg" alt="" class="product-card__category-icon">
+                                    <span class="product-card__category-name">ChatGPT</span>
+                                </div>
+                            </div>
+                            <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                            <p class="product-card__price">2.99 $</p>
+                        </div>
+                        
+
+
+                    </a>
+
+                    <a class="product-card" href="#">
+                        <div class="prop-container-100">
+                            <div class="prop-container-100__inner">
+                                <div class="prop-container-100__content">
+                                    <img src="assets/img/catalog/green.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__text-content">
+                            <div class="product-card__info-labels">
+                                <div class="product-card__rating-label">
+                                    <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                    <span class="product-card__rating-value">5.0</span>
+                                </div>
+                                <div class="product-card__category-label bg-blue">
+                                    <img src="assets/img/icons/categories/palette-outline.svg" alt="" class="product-card__category-icon">
+                                    <span class="product-card__category-name">DALL·E</span>
+                                </div>
+                            </div>
+                            <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                            <p class="product-card__price">2.99 $</p>
+                        </div>
+                    </a>
+
+                    <a class="product-card" href="#">
+
+                        <div class="prop-container-100">
+                            <div class="prop-container-100__inner">
+                                <div class="prop-container-100__content">
+
+                                    <div class="product-card-gallery">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/1.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/3.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/4.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        <div class="product-card-gallery__pagination">
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__text-content">
+                            <div class="product-card__info-labels">
+                                <div class="product-card__rating-label">
+                                    <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                    <span class="product-card__rating-value">5.0</span>
+                                </div>
+                                <div class="product-card__category-label bg-lilac">
+                                    <img src="assets/img/icons/categories/boat-line.svg" alt="" class="product-card__category-icon">
+                                    <span class="product-card__category-name">Midjourney</span>
+                                </div>
+                            </div>
+                            <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                            <p class="product-card__price">2.99 $</p>
+                        </div>
+                        
+
+
+                    </a>
+
+                    <a class="product-card" href="#">
+
+                        <div class="prop-container-100">
+                            <div class="prop-container-100__inner">
+                                <div class="prop-container-100__content">
+
+                                    <div class="product-card-gallery">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/1.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/3.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/4.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        <div class="product-card-gallery__pagination">
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__text-content">
+                            <div class="product-card__info-labels">
+                                <div class="product-card__rating-label">
+                                    <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                    <span class="product-card__rating-value">5.0</span>
+                                </div>
+                                <div class="product-card__category-label bg-violet">
+                                    <img src="assets/img/icons/categories/brush.svg" alt="" class="product-card__category-icon">
+                                    <span class="product-card__category-name">Stable Diff.</span>
+                                </div>
+                            </div>
+                            <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                            <p class="product-card__price">2.99 $</p>
+                        </div>
+                        
+
+
+                    </a>
+
+                    <a class="product-card" href="#">
+                        <div class="prop-container-100">
+                            <div class="prop-container-100__inner">
+                                <div class="prop-container-100__content">
+                                    <img src="assets/img/catalog/pink.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__text-content">
+                            <div class="product-card__info-labels">
+                                <div class="product-card__rating-label">
+                                    <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                    <span class="product-card__rating-value">5.0</span>
+                                </div>
+                                <div class="product-card__category-label bg-red">
+                                    <img src="assets/img/icons/categories/bard.svg" alt="" class="product-card__category-icon">
+                                    <span class="product-card__category-name">Bard</span>
+                                </div>
+                            </div>
+                            <p class="product-card__product-name">Написание рецептов</p>
+                            <p class="product-card__price">2.99 $</p>
+                        </div>
+                    </a>
+
+                    <a class="product-card" href="#">
+
+                        <div class="prop-container-100">
+                            <div class="prop-container-100__inner">
+                                <div class="prop-container-100__content">
+
+                                    <div class="product-card-gallery">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/1.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/3.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/4.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        <div class="product-card-gallery__pagination">
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__text-content">
+                            <div class="product-card__info-labels">
+                                <div class="product-card__rating-label">
+                                    <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                    <span class="product-card__rating-value">5.0</span>
+                                </div>
+                                <div class="product-card__category-label bg-pink">
+                                    <img src="assets/img/icons/categories/chatGPT.svg" alt="" class="product-card__category-icon">
+                                    <span class="product-card__category-name">ChatGPT</span>
+                                </div>
+                            </div>
+                            <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                            <p class="product-card__price">2.99 $</p>
+                        </div>
+                        
+
+
+                    </a>
+
+                    <a class="product-card" href="#">
+                        <div class="prop-container-100">
+                            <div class="prop-container-100__inner">
+                                <div class="prop-container-100__content">
+                                    <img src="assets/img/catalog/green.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__text-content">
+                            <div class="product-card__info-labels">
+                                <div class="product-card__rating-label">
+                                    <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                    <span class="product-card__rating-value">5.0</span>
+                                </div>
+                                <div class="product-card__category-label bg-blue">
+                                    <img src="assets/img/icons/categories/palette-outline.svg" alt="" class="product-card__category-icon">
+                                    <span class="product-card__category-name">DALL·E</span>
+                                </div>
+                            </div>
+                            <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                            <p class="product-card__price">2.99 $</p>
+                        </div>
+                    </a>
+
+                    <a class="product-card" href="#">
+
+                        <div class="prop-container-100">
+                            <div class="prop-container-100__inner">
+                                <div class="prop-container-100__content">
+
+                                    <div class="product-card-gallery">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/1.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/3.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/4.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        <div class="product-card-gallery__pagination">
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__text-content">
+                            <div class="product-card__info-labels">
+                                <div class="product-card__rating-label">
+                                    <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                    <span class="product-card__rating-value">5.0</span>
+                                </div>
+                                <div class="product-card__category-label bg-lilac">
+                                    <img src="assets/img/icons/categories/boat-line.svg" alt="" class="product-card__category-icon">
+                                    <span class="product-card__category-name">Midjourney</span>
+                                </div>
+                            </div>
+                            <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                            <p class="product-card__price">2.99 $</p>
+                        </div>
+                        
+
+
+                    </a>
+
+                    <a class="product-card" href="#">
+
+                        <div class="prop-container-100">
+                            <div class="prop-container-100__inner">
+                                <div class="prop-container-100__content">
+
+                                    <div class="product-card-gallery">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/1.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/3.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/4.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        <div class="product-card-gallery__pagination">
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__text-content">
+                            <div class="product-card__info-labels">
+                                <div class="product-card__rating-label">
+                                    <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                    <span class="product-card__rating-value">5.0</span>
+                                </div>
+                                <div class="product-card__category-label bg-violet">
+                                    <img src="assets/img/icons/categories/brush.svg" alt="" class="product-card__category-icon">
+                                    <span class="product-card__category-name">Stable Diff.</span>
+                                </div>
+                            </div>
+                            <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                            <p class="product-card__price">2.99 $</p>
+                        </div>
+                        
+
+
+                    </a>
+
+                    <a class="product-card" href="#">
+                        <div class="prop-container-100">
+                            <div class="prop-container-100__inner">
+                                <div class="prop-container-100__content">
+                                    <img src="assets/img/catalog/pink.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__text-content">
+                            <div class="product-card__info-labels">
+                                <div class="product-card__rating-label">
+                                    <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                    <span class="product-card__rating-value">5.0</span>
+                                </div>
+                                <div class="product-card__category-label bg-red">
+                                    <img src="assets/img/icons/categories/bard.svg" alt="" class="product-card__category-icon">
+                                    <span class="product-card__category-name">Bard</span>
+                                </div>
+                            </div>
+                            <p class="product-card__product-name">Написание рецептов</p>
+                            <p class="product-card__price">2.99 $</p>
+                        </div>
+                    </a>
+
+                    <a class="product-card" href="#">
+
+                        <div class="prop-container-100">
+                            <div class="prop-container-100__inner">
+                                <div class="prop-container-100__content">
+
+                                    <div class="product-card-gallery">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/1.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/3.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/4.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        <div class="product-card-gallery__pagination">
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__text-content">
+                            <div class="product-card__info-labels">
+                                <div class="product-card__rating-label">
+                                    <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                    <span class="product-card__rating-value">5.0</span>
+                                </div>
+                                <div class="product-card__category-label bg-pink">
+                                    <img src="assets/img/icons/categories/chatGPT.svg" alt="" class="product-card__category-icon">
+                                    <span class="product-card__category-name">ChatGPT</span>
+                                </div>
+                            </div>
+                            <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                            <p class="product-card__price">2.99 $</p>
+                        </div>
+                        
+
+
+                    </a>
+
+                    <a class="product-card" href="#">
+                        <div class="prop-container-100">
+                            <div class="prop-container-100__inner">
+                                <div class="prop-container-100__content">
+                                    <img src="assets/img/catalog/green.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__text-content">
+                            <div class="product-card__info-labels">
+                                <div class="product-card__rating-label">
+                                    <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                    <span class="product-card__rating-value">5.0</span>
+                                </div>
+                                <div class="product-card__category-label bg-blue">
+                                    <img src="assets/img/icons/categories/palette-outline.svg" alt="" class="product-card__category-icon">
+                                    <span class="product-card__category-name">DALL·E</span>
+                                </div>
+                            </div>
+                            <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                            <p class="product-card__price">2.99 $</p>
+                        </div>
+                    </a>
+
+                    <a class="product-card" href="#">
+
+                        <div class="prop-container-100">
+                            <div class="prop-container-100__inner">
+                                <div class="prop-container-100__content">
+
+                                    <div class="product-card-gallery">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/1.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/3.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/4.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        <div class="product-card-gallery__pagination">
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__text-content">
+                            <div class="product-card__info-labels">
+                                <div class="product-card__rating-label">
+                                    <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                    <span class="product-card__rating-value">5.0</span>
+                                </div>
+                                <div class="product-card__category-label bg-lilac">
+                                    <img src="assets/img/icons/categories/boat-line.svg" alt="" class="product-card__category-icon">
+                                    <span class="product-card__category-name">Midjourney</span>
+                                </div>
+                            </div>
+                            <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                            <p class="product-card__price">2.99 $</p>
+                        </div>
+                        
+
+
+                    </a>
+
+                    <a class="product-card" href="#">
+
+                        <div class="prop-container-100">
+                            <div class="prop-container-100__inner">
+                                <div class="prop-container-100__content">
+
+                                    <div class="product-card-gallery">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/1.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/3.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/4.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        <div class="product-card-gallery__pagination">
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__text-content">
+                            <div class="product-card__info-labels">
+                                <div class="product-card__rating-label">
+                                    <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                    <span class="product-card__rating-value">5.0</span>
+                                </div>
+                                <div class="product-card__category-label bg-violet">
+                                    <img src="assets/img/icons/categories/brush.svg" alt="" class="product-card__category-icon">
+                                    <span class="product-card__category-name">Stable Diff.</span>
+                                </div>
+                            </div>
+                            <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                            <p class="product-card__price">2.99 $</p>
+                        </div>
+                        
+
+
+                    </a>
+
+                    <a class="product-card" href="#">
+                        <div class="prop-container-100">
+                            <div class="prop-container-100__inner">
+                                <div class="prop-container-100__content">
+                                    <img src="assets/img/catalog/pink.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__text-content">
+                            <div class="product-card__info-labels">
+                                <div class="product-card__rating-label">
+                                    <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                    <span class="product-card__rating-value">5.0</span>
+                                </div>
+                                <div class="product-card__category-label bg-red">
+                                    <img src="assets/img/icons/categories/bard.svg" alt="" class="product-card__category-icon">
+                                    <span class="product-card__category-name">Bard</span>
+                                </div>
+                            </div>
+                            <p class="product-card__product-name">Написание рецептов</p>
+                            <p class="product-card__price">2.99 $</p>
+                        </div>
+                    </a>
+                    <a class="product-card" href="#">
+
+                        <div class="prop-container-100">
+                            <div class="prop-container-100__inner">
+                                <div class="prop-container-100__content">
+
+                                    <div class="product-card-gallery">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/1.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/3.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/4.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        <div class="product-card-gallery__pagination">
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__text-content">
+                            <div class="product-card__info-labels">
+                                <div class="product-card__rating-label">
+                                    <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                    <span class="product-card__rating-value">5.0</span>
+                                </div>
+                                <div class="product-card__category-label bg-pink">
+                                    <img src="assets/img/icons/categories/chatGPT.svg" alt="" class="product-card__category-icon">
+                                    <span class="product-card__category-name">ChatGPT</span>
+                                </div>
+                            </div>
+                            <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                            <p class="product-card__price">2.99 $</p>
+                        </div>
+                        
+
+
+                    </a>
+
+                    <a class="product-card" href="#">
+                        <div class="prop-container-100">
+                            <div class="prop-container-100__inner">
+                                <div class="prop-container-100__content">
+                                    <img src="assets/img/catalog/green.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__text-content">
+                            <div class="product-card__info-labels">
+                                <div class="product-card__rating-label">
+                                    <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                    <span class="product-card__rating-value">5.0</span>
+                                </div>
+                                <div class="product-card__category-label bg-blue">
+                                    <img src="assets/img/icons/categories/palette-outline.svg" alt="" class="product-card__category-icon">
+                                    <span class="product-card__category-name">DALL·E</span>
+                                </div>
+                            </div>
+                            <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                            <p class="product-card__price">2.99 $</p>
+                        </div>
+                    </a>
+
+                    <a class="product-card" href="#">
+
+                        <div class="prop-container-100">
+                            <div class="prop-container-100__inner">
+                                <div class="prop-container-100__content">
+
+                                    <div class="product-card-gallery">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/1.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/3.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/4.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        <div class="product-card-gallery__pagination">
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__text-content">
+                            <div class="product-card__info-labels">
+                                <div class="product-card__rating-label">
+                                    <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                    <span class="product-card__rating-value">5.0</span>
+                                </div>
+                                <div class="product-card__category-label bg-lilac">
+                                    <img src="assets/img/icons/categories/boat-line.svg" alt="" class="product-card__category-icon">
+                                    <span class="product-card__category-name">Midjourney</span>
+                                </div>
+                            </div>
+                            <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                            <p class="product-card__price">2.99 $</p>
+                        </div>
+                        
+
+
+                    </a>
+
+                    <a class="product-card" href="#">
+
+                        <div class="prop-container-100">
+                            <div class="prop-container-100__inner">
+                                <div class="prop-container-100__content">
+
+                                    <div class="product-card-gallery">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/1.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/3.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/4.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/catalog/2.png" alt="">
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        <div class="product-card-gallery__pagination">
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__text-content">
+                            <div class="product-card__info-labels">
+                                <div class="product-card__rating-label">
+                                    <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                    <span class="product-card__rating-value">5.0</span>
+                                </div>
+                                <div class="product-card__category-label bg-violet">
+                                    <img src="assets/img/icons/categories/brush.svg" alt="" class="product-card__category-icon">
+                                    <span class="product-card__category-name">Stable Diff.</span>
+                                </div>
+                            </div>
+                            <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                            <p class="product-card__price">2.99 $</p>
+                        </div>
+                        
+
+
+                    </a>
+
+                    <a class="product-card" href="#">
+                        <div class="prop-container-100">
+                            <div class="prop-container-100__inner">
+                                <div class="prop-container-100__content">
+                                    <img src="assets/img/catalog/pink.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__text-content">
+                            <div class="product-card__info-labels">
+                                <div class="product-card__rating-label">
+                                    <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                    <span class="product-card__rating-value">5.0</span>
+                                </div>
+                                <div class="product-card__category-label bg-red">
+                                    <img src="assets/img/icons/categories/bard.svg" alt="" class="product-card__category-icon">
+                                    <span class="product-card__category-name">Bard</span>
+                                </div>
+                            </div>
+                            <p class="product-card__product-name">Написание рецептов</p>
+                            <p class="product-card__price">2.99 $</p>
+                        </div>
+                    </a>
+
+                </div>
+            </main>
+        </div>        
+    </div>
+    
+
+@@include('templates/footer.html')
+    
+
+
+
+    

@@ -1,0 +1,208 @@
+@@include('templates/head.html')
+@@include('templates/header.html')
+
+    
+    <main class="sale-page">
+        <section class="section">
+
+            <div class="steps step-2">
+
+                <div class="steps__lines">
+                    <div class="steps__main-line">
+                        <div class="steps__progress-line">
+
+                        </div>
+                        <div class="step-block active">
+                            <div class="step-block__value">Шаг 1</div>
+                        </div>
+                        <div class="step-block step-2 active">
+                            <div class="step-block__value">Шаг 2</div>
+                        </div>
+                        <div class="step-block step-3 ">
+                            <div class="step-block__value">Шаг 3</div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <form action="#">
+                <h1 class="title-product sp mb-4">Код запроса</h1>
+
+                
+
+                <div class="sp-block-57 mb-5 mb-hd-7">
+                    <div class="form-bg rounded-2 px-3 py-3 py-lg-4 px-lg-6 py-hd-6 px-hd-7">
+                        <h3 class="sp-title-block mb-3">Скопируйте и вставьте ваш DALL·E запрос</h3>                        
+                        <label for="query-text" class="sp-sublabel mb-2 mb-xl-3">Заключите любые переменные в [квадратные скобки].</label>
+                        <label for="query-text" class="sp-label mb-4 ">Запрос</label>
+
+                        <textarea name="query-text" id="query-text" class="sp-textarea small"></textarea>
+                    </div>
+                </div>
+
+                <div class="sp-block-57 mb-5 mb-hd-7">
+                    <div class="form-bg rounded-2 px-3 px-3 py-3 py-lg-4 px-lg-6 py-hd-6 px-hd-7">
+                        <label for="instruction-query" class="sp-label mb-3 ">Инструкция к запросу</label>
+                        <label for="instruction-query" class="sp-sublabel mb-2 mb-xl-3">Любые дополнительные советы для покупателя о том, как использовать этот запрос.</label>
+
+                        <textarea name="instruction-query" id="instruction-query" class="sp-textarea small"></textarea>
+                    </div>
+                </div>
+
+                <div class="sp-block-load-images mb-5 mb-hd-7">
+                    <div class="form-bg rounded-2 px-3 px-3 py-3 py-lg-4 px-lg-6 py-hd-6 px-hd-7">
+                        <h3 class="sp-title-block middle-sm mb-4">Загрузите 7 примеров изображений, сгенерированных с помощью этого запроса (без коллажей или правок)</h3>                        
+                        <label for="query-text" class="sp-sublabel mb-2 mb-xl-3">Загружайте только свои изображения размером 1024x1024, сгенерированные DALL·E.
+                            Запросы с большим количеством примеров изображений обычно приносят больше продаж.</label>
+
+                        <div class="load-images-swiper-wrap">
+                            <div class="load-images-swiper-nav prev">
+                                <svg width="24" height="44" viewBox="0 0 34 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M34 9.25805L12.75 31.9658L34 54.6735L29.75 63.7566L0 31.9658L29.75 0.174957L34 9.25805Z" fill="white"/>
+                                </svg> 
+                            </div>
+
+                            <div class="load-images-swiper swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <span class="clear-load-img" data-target="#img-1">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="12" fill="#463952"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.3547 6.6838C7.52556 6.51295 7.80257 6.51295 7.97342 6.6838L17.3068 16.0171C17.4776 16.188 17.4776 16.465 17.3068 16.6359C17.1359 16.8067 16.8589 16.8067 16.688 16.6359L7.3547 7.30252C7.18385 7.13167 7.18385 6.85466 7.3547 6.6838Z" fill="#E5580A"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3068 6.6838C17.4776 6.85466 17.4776 7.13167 17.3068 7.30252L7.97342 16.6359C7.80257 16.8067 7.52556 16.8067 7.3547 16.6359C7.18385 16.465 7.18385 16.188 7.3547 16.0171L16.688 6.6838C16.8589 6.51295 17.1359 6.51295 17.3068 6.6838Z" fill="#E5580A"/>
+                                            </svg>
+                                        </span>    
+                                        <label for="img-1" class="ratio ratio-1x1 load-img-label">
+                                            <span class="load-images-swiper-input-container">
+                                                <input type="file" id="img-1" name="img-1" class="load-input-img" accept="image/png, image/jpeg" />">
+
+                                                
+                                            </span>
+                                            
+                                            
+                                                
+                                        </label>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <span class="clear-load-img" data-target="#img-1">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="12" fill="#463952"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.3547 6.6838C7.52556 6.51295 7.80257 6.51295 7.97342 6.6838L17.3068 16.0171C17.4776 16.188 17.4776 16.465 17.3068 16.6359C17.1359 16.8067 16.8589 16.8067 16.688 16.6359L7.3547 7.30252C7.18385 7.13167 7.18385 6.85466 7.3547 6.6838Z" fill="#E5580A"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3068 6.6838C17.4776 6.85466 17.4776 7.13167 17.3068 7.30252L7.97342 16.6359C7.80257 16.8067 7.52556 16.8067 7.3547 16.6359C7.18385 16.465 7.18385 16.188 7.3547 16.0171L16.688 6.6838C16.8589 6.51295 17.1359 6.51295 17.3068 6.6838Z" fill="#E5580A"/>
+                                            </svg>
+                                        </span>    
+                                        <label for="img-2" class="ratio ratio-1x1 load-img-label">
+                                            <span class="load-images-swiper-input-container">
+                                                <input type="file" id="img-2" name="img-2" class="load-input-img" accept="image/png, image/jpeg" />">
+                                                
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <span class="clear-load-img" data-target="#img-1">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="12" fill="#463952"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.3547 6.6838C7.52556 6.51295 7.80257 6.51295 7.97342 6.6838L17.3068 16.0171C17.4776 16.188 17.4776 16.465 17.3068 16.6359C17.1359 16.8067 16.8589 16.8067 16.688 16.6359L7.3547 7.30252C7.18385 7.13167 7.18385 6.85466 7.3547 6.6838Z" fill="#E5580A"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3068 6.6838C17.4776 6.85466 17.4776 7.13167 17.3068 7.30252L7.97342 16.6359C7.80257 16.8067 7.52556 16.8067 7.3547 16.6359C7.18385 16.465 7.18385 16.188 7.3547 16.0171L16.688 6.6838C16.8589 6.51295 17.1359 6.51295 17.3068 6.6838Z" fill="#E5580A"/>
+                                            </svg>
+                                        </span>    
+                                        <label for="img-3" class="ratio ratio-1x1 load-img-label">
+                                            <span class="load-images-swiper-input-container">
+                                                <input type="file" id="img-3" name="img-3" class="load-input-img" accept="image/png, image/jpeg" />">
+                                                
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <span class="clear-load-img" data-target="#img-1">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="12" fill="#463952"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.3547 6.6838C7.52556 6.51295 7.80257 6.51295 7.97342 6.6838L17.3068 16.0171C17.4776 16.188 17.4776 16.465 17.3068 16.6359C17.1359 16.8067 16.8589 16.8067 16.688 16.6359L7.3547 7.30252C7.18385 7.13167 7.18385 6.85466 7.3547 6.6838Z" fill="#E5580A"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3068 6.6838C17.4776 6.85466 17.4776 7.13167 17.3068 7.30252L7.97342 16.6359C7.80257 16.8067 7.52556 16.8067 7.3547 16.6359C7.18385 16.465 7.18385 16.188 7.3547 16.0171L16.688 6.6838C16.8589 6.51295 17.1359 6.51295 17.3068 6.6838Z" fill="#E5580A"/>
+                                            </svg>
+                                        </span>    
+                                        <label for="img-4" class="ratio ratio-1x1 load-img-label">
+                                            <span class="load-images-swiper-input-container">
+                                                <input type="file" id="img-4" name="img-4" class="load-input-img" accept="image/png, image/jpeg" />">
+                                                
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <span class="clear-load-img" data-target="#img-1">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="12" fill="#463952"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.3547 6.6838C7.52556 6.51295 7.80257 6.51295 7.97342 6.6838L17.3068 16.0171C17.4776 16.188 17.4776 16.465 17.3068 16.6359C17.1359 16.8067 16.8589 16.8067 16.688 16.6359L7.3547 7.30252C7.18385 7.13167 7.18385 6.85466 7.3547 6.6838Z" fill="#E5580A"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3068 6.6838C17.4776 6.85466 17.4776 7.13167 17.3068 7.30252L7.97342 16.6359C7.80257 16.8067 7.52556 16.8067 7.3547 16.6359C7.18385 16.465 7.18385 16.188 7.3547 16.0171L16.688 6.6838C16.8589 6.51295 17.1359 6.51295 17.3068 6.6838Z" fill="#E5580A"/>
+                                            </svg>
+                                        </span>    
+                                        <label for="img-5" class="ratio ratio-1x1 load-img-label">
+
+                                            <span class="load-images-swiper-input-container">
+                                                <input type="file" id="img-5" name="img-5" class="load-input-img" accept="image/png, image/jpeg" />">
+                                                
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <span class="clear-load-img" data-target="#img-1">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="12" fill="#463952"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.3547 6.6838C7.52556 6.51295 7.80257 6.51295 7.97342 6.6838L17.3068 16.0171C17.4776 16.188 17.4776 16.465 17.3068 16.6359C17.1359 16.8067 16.8589 16.8067 16.688 16.6359L7.3547 7.30252C7.18385 7.13167 7.18385 6.85466 7.3547 6.6838Z" fill="#E5580A"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3068 6.6838C17.4776 6.85466 17.4776 7.13167 17.3068 7.30252L7.97342 16.6359C7.80257 16.8067 7.52556 16.8067 7.3547 16.6359C7.18385 16.465 7.18385 16.188 7.3547 16.0171L16.688 6.6838C16.8589 6.51295 17.1359 6.51295 17.3068 6.6838Z" fill="#E5580A"/>
+                                            </svg>
+                                        </span>    
+                                        <label for="img-6" class="ratio ratio-1x1 load-img-label">
+                                            <span class="load-images-swiper-input-container">
+                                                <input type="file" id="img-6" name="img-6" class="load-input-img" accept="image/png, image/jpeg" />">
+                                                
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <span class="clear-load-img" data-target="#img-1">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="12" fill="#463952"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.3547 6.6838C7.52556 6.51295 7.80257 6.51295 7.97342 6.6838L17.3068 16.0171C17.4776 16.188 17.4776 16.465 17.3068 16.6359C17.1359 16.8067 16.8589 16.8067 16.688 16.6359L7.3547 7.30252C7.18385 7.13167 7.18385 6.85466 7.3547 6.6838Z" fill="#E5580A"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3068 6.6838C17.4776 6.85466 17.4776 7.13167 17.3068 7.30252L7.97342 16.6359C7.80257 16.8067 7.52556 16.8067 7.3547 16.6359C7.18385 16.465 7.18385 16.188 7.3547 16.0171L16.688 6.6838C16.8589 6.51295 17.1359 6.51295 17.3068 6.6838Z" fill="#E5580A"/>
+                                            </svg>
+                                        </span>    
+                                        <label for="img-7" class="ratio ratio-1x1 load-img-label">
+                                            <span class="load-images-swiper-input-container">
+                                                <input type="file" id="img-7" name="img-7" class="load-input-img" accept="image/png, image/jpeg" />">
+                                                
+                                            </span>
+                                        </label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="load-images-swiper-nav next">
+                                <svg width="24" height="44" viewBox="0 0 34 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 54.6733L21.25 31.9656L0 9.2579L4.25 0.174805L34 31.9656L4.25 63.7564L0 54.6733Z" fill="white"/>
+                                </svg> 
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="profile-btn-container">
+                    <button class="btn btn-orange px-sm-9">Далее</button>
+                </div>
+            </form>
+            
+            
+        </section>
+    </main>
+
+
+@@include('templates/footer.html')

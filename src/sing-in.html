@@ -1,0 +1,58 @@
+@@include('templates/head.html')
+@@include('templates/header.html')
+
+    
+<main class="forms-page">
+        
+    <form action="#" class="form-bg form-block px-4 py-4   px-md-6  px-hd-11 py-hd-9 rounded-2">
+        <h1 class="form-title mb-2 mb-md-4 mb-hd-6">Авторизация</h1>
+
+        <div class="form-input-block mb-4 mb-hd-5">
+            <label for="email" class="form-label">E-mail</label>
+            <div class="form-input-wrap">
+                <label for="email" class="icon-for-input ">
+                    <img src="assets/img/icons/mail.svg" alt="" width="24" height="21" class="icon-mail">
+                </label>
+                <input type="email" class="input" id="email" name="email" placeholder="E-mail" required>
+            </div>
+            
+        </div>
+
+        <div class="form-input-block mb-4 mb-hd-9">
+            <label for="password" class="form-label">Пароль</label>
+            <div class="form-input-wrap">
+                <label for="password" class="icon-for-input ">
+                    <img src="assets/img/icons/key.svg" alt="" width="19" height="19" class="icon-key">
+                </label>
+                <input type="password" class="input" id="password" name="password" placeholder="Пароль" required>
+            </div>
+        </div>
+
+        <button class="form-submit mb-4 mb-lg-7">
+            <img src="assets/img/icons/lock.svg" alt="" class="me-5" width="16" height="16">
+            Войти
+        </button>
+
+        <div class="form-link-box mb-6 mb-lg-7 mb-hd-9">
+            <a href="recovery-password.html">Восстановить пароль</a>
+            <a href="sing-up.html">Зарегистрироваться</a>
+        </div>
+
+
+        <div class="google-auth">
+            <p class="mb-2 mb-lg-5">или</p>
+            <button class="form-submit google">
+                <img src="assets/img/icons/logos_google-icon.svg" alt="" class="me-2" width="16" height="16">
+                Войти через Google
+            </button>
+        </div>
+        
+    </form>
+    
+        
+    
+    
+</main>
+
+
+@@include('templates/footer.html')

@@ -1,0 +1,174 @@
+@@include('templates/head.html')
+@@include('templates/header.html')
+
+    
+    <main class="forms-page">
+        
+        <div class="balance form-bg form-block px-2 py-4    py-md-6 px-md-7 px-hd-9 py-hd-9 rounded-2">
+
+            <div class="balance__top mb-4">
+                <h1 class="balance__title">Баланс</h1>
+
+                <div class="balance__curency-block">
+
+                    <label for="dollar" class="curreny-radio">
+                        <input type="radio" class="curreny-radio__radio" id="dollar" name="currency">
+                        <span  class="curreny-radio__vis-radio"></span>
+                        <span  class="curreny-radio__value">$</span>
+                    </label>
+
+                    <label for="ruble" class="curreny-radio">
+                        <input type="radio" class="curreny-radio__radio" id="ruble" name="currency" checked>
+                        <span  class="curreny-radio__vis-radio"></span>
+                        <span  class="curreny-radio__value">₽</span>
+                    </label>
+
+                    <label for="euro" class="curreny-radio">
+                        <input type="radio" class="curreny-radio__radio" id="euro" name="currency">
+                        <span  class="curreny-radio__vis-radio"></span>
+                        <span  class="curreny-radio__value">€</span>
+                    </label>
+                    
+                    
+                </div>
+                <div class="balance__value-block">420₽</div>
+            </div>
+
+            <div class="balance__operations mb-5 mb-md-6">
+                <button class="btn btn-orange">Пополнить баланс</button>
+                <button class="btn btn-white border-1">Вывести деньги</button>
+            </div>
+
+
+            <div class="balance__operations-list">
+                <h3 class="balance__operations-list-title mb-2">Операции по счету</h3>
+
+                <div class="movement-funds">
+
+                    <div class="movement-funds__tabs mb-4">
+                        <label for="mf-tab-1" class="mf-tab">
+                            <input type="radio" class="mf-tab__radio" id="mf-tab-1" name="mf-tab" value="0" checked>
+                            <span  class="mf-tab__text">Пополнение</span>
+                        </label>
+
+                        <label for="mf-tab-2" class="mf-tab">
+                            <input type="radio" class="mf-tab__radio" id="mf-tab-2" name="mf-tab" value="1">
+                            <span class="mf-tab__text">Вывод</span>
+                        </label>
+
+                        <label for="mf-tab-3" class="mf-tab">
+                            <input type="radio" class="mf-tab__radio" id="mf-tab-3" name="mf-tab" value="2">
+                            <span  class="mf-tab__text">Доходы</span>
+                        </label>
+
+                        <label for="mf-tab-4" class="mf-tab">
+                            <input type="radio" class="mf-tab__radio" id="mf-tab-4" name="mf-tab" value="3">
+                            <span  class="mf-tab__text">Расходы</span>
+                        </label>
+                        
+                    </div>
+
+
+                    <div class="mf-table px-2 py-3 px-lg-4 py-lg-4">
+                        <table class="mf-table__table">
+                            <thead>
+                                <tr>
+                                    <th>Дата</th>
+                                    <th>Операции</th>
+                                    <th>Тип</th>
+                                    <th>Всего</th>
+                                    <th>Статус</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-type="0">
+                                    <td>3.05.2023</td>
+                                    <td class="positive">+ 20 $</td>
+                                    <td>Пополнение</td>
+                                    <td>20 $</td>
+                                    <td class="b-state-processed">В процессе</td>
+                                </tr>
+                                <tr data-type="0">
+                                    <td>4.05.2023</td>
+                                    <td class="positive">+ 1300 ₽  </td>
+                                    <td>Пополнение</td>
+                                    <td>2000 ₽</td>
+                                    <td class="b-state-success">Завершено</td>
+                                </tr>
+                                <tr data-type="0">
+                                    <td>4.05.2023</td>
+                                    <td class="positive">+ 1300 ₽  </td>
+                                    <td>Пополнение</td>
+                                    <td>2000 ₽</td>
+                                    <td class="b-state-canceled">Отменено</td>
+                                </tr>
+
+
+                                <tr data-type="1">
+                                    <td>3.05.2023</td>
+                                    <td class="negative">- 200 $</td>
+                                    <td>Вывод</td>
+                                    <td>20 $</td>
+                                    <td class="b-state-processed">В процессе</td>
+                                </tr>
+                                <tr data-type="1">
+                                    <td>4.05.2023</td>
+                                    <td class="negative">- 13000 ₽  </td>
+                                    <td>Вывод</td>
+                                    <td>2000 ₽</td>
+                                    <td class="b-state-success">Завершено</td>
+                                </tr>
+                                <tr data-type="1">
+                                    <td>4.05.2023</td>
+                                    <td class="negative">- 13000 ₽  </td>
+                                    <td>Вывод</td>
+                                    <td>2000 ₽</td>
+                                    <td class="b-state-canceled">Отменено</td>
+                                </tr>
+
+                                <tr data-type="2">
+                                    <td>3.05.2023</td>
+                                    <td class="positive">+ 200 $</td>
+                                    <td>Продажа</td>
+                                    <td>20 $</td>
+                                    <td class="b-state-canceled">Отменено</td>
+                                </tr>
+                                <tr data-type="2">
+                                    <td>4.05.2023</td>
+                                    <td class="positive">+ 13000 ₽  </td>
+                                    <td>Продажа</td>
+                                    <td>2000 ₽</td>
+                                    <td class="b-state-canceled">Отменено</td>
+                                </tr>
+
+
+                                <tr data-type="3">
+                                    <td>5.05.2023</td>
+                                    <td class="negative">- 2000 ₽ </td>
+                                    <td>Покупка</td>
+                                    <td>2000 ₽</td>
+                                    <td class="b-state-canceled">Отменено</td>
+                                </tr>
+                                <tr data-type="3">
+                                    <td>5.05.2023</td>
+                                    <td class="negative">- 330 ₽ </td>
+                                    <td>Покупка</td>
+                                    <td>1000 ₽</td>
+                                    <td class="b-state-canceled">Отменено</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+            
+        
+        
+    </main>
+
+
+@@include('templates/footer.html')

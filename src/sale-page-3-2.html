@@ -1,0 +1,340 @@
+@@include('templates/head.html')
+@@include('templates/header.html')
+
+    
+    <main class="sale-page">
+        <section class="section">
+
+            <div class="steps step-3">
+
+                <div class="steps__lines">
+                    <div class="steps__main-line">
+                        <div class="steps__progress-line">
+
+                        </div>
+                        <div class="step-block active">
+                            <div class="step-block__value">Шаг 1</div>
+                        </div>
+                        <div class="step-block step-2 active">
+                            <div class="step-block__value">Шаг 2</div>
+                        </div>
+                        <div class="step-block step-3 active">
+                            <div class="step-block__value active">Шаг 3</div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <form action="#">
+                <h1 class="title-product sp mb-4">Завершающий этап</h1>
+
+                <div class="sp-inline-block mb-5 mb-hd-7">
+                    <div class="form-bg rounded-2 px-3 py-3 py-lg-4 px-lg-6 py-hd-6 px-hd-7">
+                                                
+                        <h3 class="sp-title-block  mb-4">К какой категории относится запрос?</h3>
+                        <p  class="sp-sublabel mb-4 ">Напишите заголовок для  вашего запроса. </p>
+                        <div class="sp-select-wrap ">
+                            <select name="query-category" id="query-category" class="js-choice"  >
+                                <option value="" selected>Категория</option>
+                                
+                                <option value="3D">3D</option>
+                                <option value="Аксессуар">Аксессуар</option>
+                                <option value="Реклама">Реклама</option>
+                                <option value="Животное">Животное</option>
+                                <option value="Аниме">Аниме</option>
+
+                                <option value="Искусство">Искусство</option>
+                                <option value="Персонаж">Персонаж</option>
+                                <option value="Архитектура">Архитектура</option>
+                                <option value="Бизнес">Бизнес</option>
+                                <option value="Мультфильм">Мультфильм</option>
+
+                                <option value="Знаменитость">Знаменитость</option>
+                                <option value="Чат-бот">Чат-бот</option>
+                                <option value="Тренер">Тренер</option>
+                                <option value="Код">Код</option>
+                                <option value="Напиток">Напиток</option>
+                                <option value="Рисунок">Рисунок</option>
+                                <option value="Копирайтинг">Копирайтинг</option>
+                                <option value="Киберпанк">Киберпанк</option>
+                                <option value="Мода">Мода</option>
+                                <option value="Финансы">Финансы</option>
+
+                                <option value="Еда">Еда</option>
+                                <option value="Развлечения">Развлечения</option>
+                                <option value="Игры">Игры</option>
+                                <option value="Стекло">Стекло</option>
+                                <option value="Здоровье">Здоровье</option>
+                                <option value="Иконки">Иконки</option>
+                                <option value="Идеи">Идеи</option>
+                                <option value="Иллюстрации">Иллюстрации</option>
+                                <option value="Интерьер">Интерьер</option>
+                                <option value="Украшения">Украшения</option>
+
+                                <option value="Пейзаж">Пейзаж</option>
+                                <option value="Логотип">Логотип</option>
+                                <option value="Маркетинг">Маркетинг</option>
+                            </select>
+                        </div>
+                        
+
+                        
+
+                    </div>
+                </div>
+
+                <div class="sp-block-980 mb-5 mb-hd-7">
+                    <div class="form-bg rounded-2 px-3 py-3 py-lg-4 px-lg-6 py-hd-6 px-hd-7">
+                        <h3 class="sp-title-block  mb-2 mb-lg-4">Напишите теги</h3>                        
+                        <label for="tags" class="sp-sublabel mb-2 mb-lg-3 ">Теги помогут покупателям находить ваш запрос.</label>
+                        <label for="tags" class="sp-label middle mb-2 mb-lg-3">Теги</label>
+                        
+                        <textarea name="tags" id="tags" class="sp-textarea small"></textarea>
+                    </div>
+                </div>
+
+
+                <div class="sp-inline-block mb-5 mb-hd-7">
+                    <div class="form-bg rounded-2 px-3 py-3 py-lg-4 px-lg-6 py-hd-6 px-hd-7">
+                        <p  class="sp-label middle mb-2 ">Ориентировочная цена</p>
+                        <p  class="sp-sublabel mb-2 ">Как вы думаете, какой должна быть цена этого запроса?</p>
+                        <div class="balance__curency-block sp-curency-block ">
+
+                            <label for="dollar" class="curreny-radio">
+                                <input type="radio" class="curreny-radio__radio" id="dollar" name="currency">
+                                <span class="curreny-radio__vis-radio"></span>
+                                <span class="curreny-radio__value">$</span>
+                            </label>
+        
+                            <label for="ruble" class="curreny-radio">
+                                <input type="radio" class="curreny-radio__radio" id="ruble" name="currency" checked="">
+                                <span class="curreny-radio__vis-radio"></span>
+                                <span class="curreny-radio__value">₽</span>
+                            </label>
+        
+                            <label for="euro" class="curreny-radio">
+                                <input type="radio" class="curreny-radio__radio" id="euro" name="currency">
+                                <span class="curreny-radio__vis-radio"></span>
+                                <span class="curreny-radio__value">€</span>
+                            </label>
+                            
+                            
+                        </div>
+
+
+                        <input type="text" class="sp-input price curency-input" name="price" >
+                    </div>
+                </div>
+
+                
+                <div class="sp-img-query-block mb-5 mb-lg-7">
+                    <div class="form-bg rounded-2 px-3 py-3 py-lg-4 px-lg-6 py-hd-6 px-hd-7">
+                        <h3 class="sp-title-block middle mb-2 mb-lg-4">Выберите из представленных изображений, то которое больше подходит к тематике вашего запроса</h3>     
+
+                        <div class="sp-img-query swiper">
+                            <div class="img-query-wrapper">
+
+                                <div class="swiper-slide">
+                                    <div class="ratio ratio-1x1 img-query book">
+                                        <label class="img-query-label" for="img-query-1">
+                                            <input type="radio" name="img-query" id="img-query-1" class="radio-img-query" value="file-name-1">
+                                            <span class="img-query-selected"></span>
+                                            <img src="assets/img/icons/book-open.svg" alt="">
+                                        </label>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="ratio ratio-1x1 img-query edit">
+                                        <label class="img-query-label" for="img-query-3">
+                                            <input type="radio" name="img-query" id="img-query-3" class="radio-img-query" value="file-name-3">
+                                            <span class="img-query-selected"></span>
+                                            <img src="assets/img/icons/edit.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="ratio ratio-1x1 img-query setting">
+                                        <label class="img-query-label" for="img-query-2">
+                                            <input type="radio" name="img-query" id="img-query-2" class="radio-img-query" value="file-name-2">
+                                            <span class="img-query-selected"></span>
+                                            <img src="assets/img/icons/setting.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="ratio ratio-1x1 img-query edit-2">
+                                        <label class="img-query-label" for="img-query-4">
+                                            <input type="radio" name="img-query" id="img-query-4" class="radio-img-query" value="file-name-4">
+                                            <span class="img-query-selected"></span>
+                                            <img src="assets/img/icons/edit-one.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                                <div class="swiper-slide">
+                                    <div class="ratio ratio-1x1 img-query keyboard">
+                                        <label class="img-query-label" for="img-query-5">
+                                            <input type="radio" name="img-query" id="img-query-5" class="radio-img-query" value="file-name-5">
+                                            <span class="img-query-selected"></span>
+                                            <img src="assets/img/icons/enter-the-keyboard.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="ratio ratio-1x1 img-query leaf">
+                                        <label class="img-query-label" for="img-query-6">
+                                            <input type="radio" name="img-query" id="img-query-6" class="radio-img-query" value="file-name-6">
+                                            <span class="img-query-selected"></span>
+                                            <img src="assets/img/icons/leaf.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="ratio ratio-1x1 img-query mail">
+                                        <label class="img-query-label" for="img-query-7">
+                                            <input type="radio" name="img-query" id="img-query-7" class="radio-img-query" value="file-name-7">
+                                            <span class="img-query-selected"></span>
+                                            <img src="assets/img/icons/mail-edit.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="ratio ratio-1x1 img-query edit-3">
+                                        <label class="img-query-label" for="img-query-8">
+                                            <input type="radio" name="img-query" id="img-query-8" class="radio-img-query" value="file-name-8">
+                                            <span class="img-query-selected"></span>
+                                            <img src="assets/img/icons/edit-3.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="ratio ratio-1x1 img-query palette">
+                                        <label class="img-query-label" for="img-query-9">
+                                            <input type="radio" name="img-query" id="img-query-9" class="radio-img-query" value="file-name-9">
+                                            <span class="img-query-selected"></span>
+                                            <img src="assets/img/icons/palette-outline.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="ratio ratio-1x1 img-query brush">
+                                        <label class="img-query-label" for="img-query-10">
+                                            <input type="radio" name="img-query" id="img-query-10" class="radio-img-query" value="file-name-10">
+                                            <span class="img-query-selected"></span>
+                                            <img src="assets/img/icons/brush.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="ratio ratio-1x1 img-query home">
+                                        <label class="img-query-label" for="img-query-11">
+                                            <input type="radio" name="img-query" id="img-query-11" class="radio-img-query" value="file-name-11">
+                                            <span class="img-query-selected"></span>
+                                            <img src="assets/img/icons/home-two.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="ratio ratio-1x1 img-query headset">
+                                        <label class="img-query-label" for="img-query-12">
+                                            <input type="radio" name="img-query" id="img-query-12" class="radio-img-query" value="file-name-12">
+                                            <span class="img-query-selected"></span>
+                                            <img src="assets/img/icons/headset.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="ratio ratio-1x1 img-query voice">
+                                        <label class="img-query-label" for="img-query-13">
+                                            <input type="radio" name="img-query" id="img-query-13" class="radio-img-query" value="file-name-13">
+                                            <span class="img-query-selected"></span>
+                                            <img src="assets/img/icons/voice.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="ratio ratio-1x1 img-query game">
+                                        <label class="img-query-label" for="img-query-14">
+                                            <input type="radio" name="img-query" id="img-query-14" class="radio-img-query" value="file-name-14">
+                                            <span class="img-query-selected"></span>
+                                            <img src="assets/img/icons/game-three.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="ratio ratio-1x1 img-query figures">
+                                        <label class="img-query-label" for="img-query-15">
+                                            <input type="radio" name="img-query" id="img-query-15" class="radio-img-query" value="file-name-15">
+                                            <span class="img-query-selected"></span>
+                                            <img src="assets/img/icons/triangle-round-rectangle.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="ratio ratio-1x1 img-query lightning">
+                                        <label class="img-query-label" for="img-query-16">
+                                            <input type="radio" name="img-query" id="img-query-16" class="radio-img-query" value="file-name-16">
+                                            <span class="img-query-selected"></span>
+                                            <img src="assets/img/icons/lightning.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="ratio ratio-1x1 img-query cup">
+                                        <label class="img-query-label" for="img-query-17">
+                                            <input type="radio" name="img-query" id="img-query-17" class="radio-img-query" value="file-name-17">
+                                            <span class="img-query-selected"></span>
+                                            <img src="assets/img/icons/trophy.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="ratio ratio-1x1 img-query calendar">
+                                        <label class="img-query-label" for="img-query-18">
+                                            <input type="radio" name="img-query" id="img-query-18" class="radio-img-query" value="file-name-18">
+                                            <span class="img-query-selected"></span>
+                                            <img src="assets/img/icons/plan.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                
+
+                
+
+                <div class="profile-btn-container">
+                    <button class="btn btn-orange px-sm-9">Далее</button>
+                </div>
+            </form>
+            
+            
+        </section>
+    </main>
+
+
+@@include('templates/footer.html')

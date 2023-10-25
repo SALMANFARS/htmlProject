@@ -1,0 +1,87 @@
+@@include('templates/head.html')
+@@include('templates/header.html')
+
+    
+    <main class="sale-page">
+        <section class="section">
+
+            <div class="steps step-2">
+
+                <div class="steps__lines">
+                    <div class="steps__main-line">
+                        <div class="steps__progress-line">
+
+                        </div>
+                        <div class="step-block active">
+                            <div class="step-block__value">Шаг 1</div>
+                        </div>
+                        <div class="step-block step-2 active">
+                            <div class="step-block__value">Шаг 2</div>
+                        </div>
+                        <div class="step-block step-3 ">
+                            <div class="step-block__value">Шаг 3</div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <form action="#">
+                <h1 class="title-product sp mb-4">Код запроса</h1>
+
+                <div class="sp-block-auto mb-5 mb-hd-7">
+                    <div class="form-bg rounded-2 px-3 py-3 py-lg-4 px-lg-6 py-hd-6 px-hd-7">
+                                                
+                        <h3 class="sp-title-block mb-3">Какой это тип GPT запроса? </h3>
+                        <label for="query-type" class="sp-sublabel mb-3 ">Выберите, к какому типу относится этот GPT запрос.</label>
+
+
+                        <div class="sp-select-wrap ">
+                            <select name="query-type" id="query-type" class="js-choice" >
+                                <option value="" selected>Тип нейросети</option>
+                                
+                                <option value="GPT / ChatGPT">GPT / ChatGPT</option>
+                                <option value="DALL·E">DALL·E</option>
+                                <option value="Midjourney">Midjourney</option>
+                                <option value="Stable Diffusion">Stable Diffusion</option>
+                                <option value="Bard">Bard</option>
+                            </select>
+                        </div>
+                        
+
+                        
+
+                    </div>
+                </div>
+
+                <div class="sp-block-69 mb-5 mb-hd-7">
+                    <div class="form-bg rounded-2 px-3 py-3 py-lg-4 px-lg-6 py-hd-6 px-hd-7">
+                        <h3 class="sp-title-block middle mb-4">Напишите ваш текстовый запрос.</h3>                        
+                        <label for="code-query" class="sp-label middle mb-5 ">Код запроса</label>
+
+                        <textarea name="code-query" id="code-query" class="sp-textarea big"></textarea>
+                    </div>
+                </div>
+
+                <div class="sp-block-71 mb-5 mb-lg-7">
+                    <div class="form-bg rounded-2 px-3 py-3 py-lg-4 px-lg-6 py-hd-6 px-hd-7">
+                        
+                        <h3 class="sp-title-block middle mb-4">Инструкция к запросу</h3>                        
+                        <label for="instruction-query" class="sp-sublabel mb-2 mb-xl-3">Любые дополнительные советы для покупателя о том, как использовать этот запрос.</label>
+
+                        <textarea name="instruction-query" id="instruction-query" class="sp-textarea"></textarea>
+                    </div>
+                </div>
+
+                <div class="profile-btn-container">
+                    <button class="btn btn-orange px-sm-9">Далее</button>
+                </div>
+            </form>
+            
+            
+        </section>
+    </main>
+
+
+@@include('templates/footer.html')

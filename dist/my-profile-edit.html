@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Краткое описание страницы"/>
+    <title>FindPrompt</title>
+    <link rel="shortcut icon" href="assets/img/favicon.svg" type="image/x-icon">
+    
+    <link rel="stylesheet" href="assets/css/main.min.css">     
+    
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__left">
+                <a href="index.html" class="header__logo">
+                    <picture>
+                        <source srcset="assets/img/logo.svg" media="(min-width: 768px)">
+                        <img src="assets/img/mobile-logo.svg" alt="">
+                    </picture>
+                </a>
+
+                <form action="search.html" class="h-search-form">
+                    <input type="text" name="query" required class="h-search-form__input" placeholder="Поиск">
+                    <button class="h-search-form__submit">
+                        <img src="assets/img/icons/search.svg" alt="">
+                    </button>
+
+                    <div class="search-hints">
+                    
+                        <div class="search-hint">High Quality Cartoon Cat And Dog Animals</div>
+                        <div class="search-hint">Cartoon Vector-like Stickers</div>
+                        <div class="search-hint">Cartoonish Illustrations</div>
+                        <div class="search-no-result">
+                            Поиск не дал результатов
+                        </div>
+                    </div>
+                    <div class="h-search-form__fog"></div>
+                </form>
+
+            </div>
+
+            <nav class="h-menu">
+                <ul class="h-menu__list">
+                    <li class="h-menu__item"><a href="catalog.html" class="h-menu__link">Маркетплейс</a></li>
+                    <li class="h-menu__item"><a href="messages.html" class="h-menu__link">Чат</a></li>
+                    <li class="h-menu__item"><a href="favorites.html" class="h-menu__link">Избранное</a></li>
+                    <li class="h-menu__item"><a href="sale-page-1.html" class="h-menu__link">Продать</a></li>                       
+                </ul>
+            </nav>
+
+            <div class="user-controls">
+
+                <!-- 
+                    шаблон выпадающего меню находится в контейнере с классом tippy-templates
+                    при выборе пугкта меню генерируется пользовательское событие changeCurrency см. main.js                
+                -->
+                
+                <button class="h-dropdown" data-template="currency-drop-list"  data-type="currency">
+                    <span class="h-dropdown__current">USD</span>
+                    <img src="assets/img/icons/arrow-dropdown.svg" alt="">
+                </button>
+                <!-- 
+                    шаблон выпадающего меню находится в контейнере с классом tippy-templates
+                    при выборе пугкта меню генерируется пользовательское событие changeLang см. main.js                
+                -->
+                <button class="h-dropdown" data-template="lang-drop-list"  data-type="lang">
+                    <span class="h-dropdown__current">RU</span>
+                    <img src="assets/img/icons/arrow-dropdown.svg" alt="">
+                </button>
+
+
+                <div class="user-alert">
+                    <button class="h-alert">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.75C15.4518 2.75 18.25 5.54821 18.25 9V18.25H5.75V9C5.75 5.54821 8.54821 2.75 12 2.75ZM19.75 18.25V9C19.75 4.71979 16.2802 1.25 12 1.25C7.71979 1.25 4.25 4.71979 4.25 9V18.25H2C1.58579 18.25 1.25 18.5858 1.25 19C1.25 19.4142 1.58579 19.75 2 19.75H22C22.4142 19.75 22.75 19.4142 22.75 19C22.75 18.5858 22.4142 18.25 22 18.25H19.75Z" fill="white"/>
+                            <path d="M8.75 19C8.75 18.5858 9.08579 18.25 9.5 18.25H14.5C14.9142 18.25 15.25 18.5858 15.25 19V19.5C15.25 21.2949 13.7949 22.75 12 22.75C10.2051 22.75 8.75 21.2949 8.75 19.5V19ZM10.2677 19.75C10.389 20.5981 11.1184 21.25 12 21.25C12.8816 21.25 13.611 20.5981 13.7323 19.75H10.2677Z" fill="white"/>
+                        </svg>
+    
+                        <span class="h-alert__qty">
+                            <span class="h-alert__qty-num">1</span>                        
+                        </span>
+                    </button>
+    
+
+                    <div class="alert-container">
+                        <ul class="alert-messages">
+                            <li class="alert-messages__setting">
+                                <a href="my-profile-edit.html">
+                                    <img src="assets/img/icons/config.svg" alt="" width="24" height="24">
+                                </a>
+                                </button>
+                                <button class="volume-settings">
+                                    
+                                </button>
+
+                                <button class="alert-messages__hide">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="white"/>
+                                    </svg> 
+                                </button>
+                            </li>
+                            <li class="alert-messages__item">
+                                <a href="#" class="alert-messages__link">
+                                    <img src="assets/img/avatar-alert.png" alt="" class="alert-messages__avatar">
+                                    <div class="alert-messages__text-block">
+                                        <p class="alert-messages__message"><b>@username1</b> подписался на вас</p>
+                                        <p class="alert-messages__ago">3 минуты назад</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="alert-messages__item">
+                                <a href="#" class="alert-messages__link">
+                                    <img src="assets/img/avatar-alert.png" alt="" class="alert-messages__avatar">
+                                    <div class="alert-messages__text-block">
+                                        <p class="alert-messages__message"><b>@username1</b> купил ваш запрос</p>
+                                        <p class="alert-messages__ago">3 минуты назад</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="alert-messages__item">
+                                <a href="#" class="alert-messages__link">
+                                    <img src="assets/img/avatar-alert.png" alt="" class="alert-messages__avatar">
+                                    <div class="alert-messages__text-block">
+                                        <p class="alert-messages__message"><b>@username1</b> оставил отзыв</p>
+                                        <p class="alert-messages__ago">3 минуты назад</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="alert-messages__item">
+                                <a href="#" class="alert-messages__link">
+                                    <img src="assets/img/avatar-alert.png" alt="" class="alert-messages__avatar">
+                                    <div class="alert-messages__text-block">
+                                        <p class="alert-messages__message">Модерация успешно пройдена</p>
+                                        <p class="alert-messages__ago">3 минуты назад</p>
+                                    </div>
+                                </a>
+                            </li>
+                            
+
+                           
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-dropmenu" data-template="profile-drop-list">
+                    <button class="profile-btn">
+                        <img src="assets/img/icons/user.svg" alt="" class="profile-btn__icon">
+                        <img src="assets/img/icons/arrow-dropdown.svg" alt="">
+                    </button>
+
+                    <div class="profile-dropmenu__fog"></div>
+                </div>
+                
+
+                <button class="hamburger"><img src="assets/img/hamburger.svg" alt=""></button>
+            </div>
+        </div>
+
+        
+    </header>
+
+
+    <nav class="mob-menu">
+        <div class="mob-menu__inner">
+            <div class="mob-menu__header">
+                <div class="mob-menu__header--left-group">
+                    <a href="index.html" class="mob-menu__logo">
+                        <img src="assets/img/mobile-logo.svg" alt="" width="36" height="36">
+                    </a>
+
+                    <div class="mob-menu__header--drop-group">
+                        <!-- 
+                            шаблон выпадающего меню находится в контейнере с классом tippy-templates
+                            при выборе пугкта меню генерируется пользовательское событие changeCurrency см. main.js                
+                        -->
+                        
+                        <button class="h-dropdown" data-template="currency-drop-list"  data-type="currency">
+                            <span class="h-dropdown__current">USD</span>
+                            <img src="assets/img/icons/arrow-dropdown.svg" alt="">
+                        </button>
+                        <!-- 
+                            шаблон выпадающего меню находится в контейнере с классом tippy-templates
+                            при выборе пугкта меню генерируется пользовательское событие changeLang см. main.js                
+                        -->
+                        <button class="h-dropdown" data-template="lang-drop-list"  data-type="lang">
+                            <span class="h-dropdown__current">RU</span>
+                            <img src="assets/img/icons/arrow-dropdown.svg" alt="">
+                        </button>
+                    </div>
+                        
+                    
+                </div>
+
+                <button class="mob-menu__close" >
+                    <img src="assets/img/icons/close.svg" alt="" width="36" height="36">
+                </button>
+            </div>
+            <div class="mob-menu__body">
+                <ul class="mm-list">
+                    <li class="mm-list__item"><a href="my-profile.html" class="mm-list__link">Профиль</a></li>
+                    <li class="mm-list__item"><a href="balance.html" class="mm-list__link">Баланс - 130 $</a></li>
+                    <li class="mm-list__item"><a href="#" class="mm-list__link">Покупки</a></li>
+                    <li class="mm-list__item"><a href="catalog.html" class="mm-list__link">Маркетплейс</a></li>
+                    <li class="mm-list__item"><a href="messages.html" class="mm-list__link">Чат</a></li>
+                    <li class="mm-list__item"><a href="favorites.html" class="mm-list__link">Избранное</a></li>
+                    <li class="mm-list__item"><a href="sale-page-1.html" class="mm-list__link">Продать</a></li>
+                    <li class="mm-list__item"><a href="my-profile-edit.html" class="mm-list__link">Настройки</a></li>
+                    <li class="mm-list__item"><a href="#" class="mm-list__link">Выход</a></li>                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="tippy-templates">
+    <div id="profile-drop-list" >
+        <ul class="header-drop-linklist" >
+            <li class="header-drop-linklist__item"><a href="#" class="header-drop-linklist__link">Профиль</a></li>
+            <li class="header-drop-linklist__item"><a href="#" class="header-drop-linklist__link">Баланс - 130 $</a></li>
+            <li class="header-drop-linklist__item"><a href="#" class="header-drop-linklist__link">Покупки</a></li>
+            <li class="header-drop-linklist__item"><a href="#" class="header-drop-linklist__link">Настройки</a></li>
+            <li class="header-drop-linklist__item"><a href="#" class="header-drop-linklist__link">Выход</a></li>                
+            
+        </ul>
+    </div>
+
+    <div class="tippy-close-panel">
+        <button class="tippy-close-btn">
+            <img src="assets/img/icons/close.svg" alt="">
+        </button>
+    </div>
+
+    <div id="tippy-filters-container" >
+        <div class="filters-tippy">
+            
+        </div>
+    </div>
+    
+    <div id="currency-drop-list" role="tooltip">
+        <ul class="header-drop-list" data-target="currency">
+            <li class="header-drop-list__item">RUB</li>
+            <li class="header-drop-list__item">USD</li>
+            <li class="header-drop-list__item">GBP</li>
+        </ul>
+    </div>
+    
+    
+    <div id="lang-drop-list">
+        <ul class="header-drop-list" data-target="lang">
+            <li class="header-drop-list__item">Ru</li>
+            <li class="header-drop-list__item">En</li>
+            <li class="header-drop-list__item">De</li>
+        </ul>
+    </div >
+    
+    
+    <div id="hint-for-select-lang" >
+        <div class="hfsl-box">
+            <h3 class="mb-4">Выберите язык заполнения карточки</h3>
+            <p >Опишите услугу на нужном вам языке, что бы привлечь покупателя из выбранного вами языкового региона</p>
+        </div>
+        
+    </div>
+
+
+</div>
+
+    
+    <main class="content-page">
+        <section class="section">
+
+            <div class="e-profile-content ">
+
+                <div class="form-bg rounded-2 px-5 py-4 px-hd-9 py-hd-7">
+                    <div class="e-profile mb-6 mb-hd-8">
+                        <div class="e-profile__img me-7 me-xl-0 mb-xl-4">
+                            <div class=" ratio-img-1x1 rounded-round">
+                                <img src="assets/img/seller.png" alt="">
+                            </div>
+                        </div>
+                        
+    
+                        <div class="e-profile__data">
+                            <p class="e-profile__name">@Username</p>                            
+                        </div>    
+                        
+                    </div>
+                    <div class="profile-tabs">
+                        <label for="tab-1" class="radio-tab">
+                            <input type="radio" name="tab-radio" id="tab-1" checked value="0">
+                            <span>Профиль</span>
+                        </label>
+                        <label for="tab-2" class="radio-tab">
+                            <input type="radio" name="tab-radio" id="tab-2" value="1">
+                            <span>Уведомления</span>
+                        </label>
+                    </div>
+                </div>
+                
+                
+
+                <div  class="profile-settings">
+
+
+                    
+                    <form enctype="multipart/form-data" method="post" class="profile-settings__sheet">
+                        <div class="profile-settings__inner-sheet">
+                            <div class="mb-7 mb-lg-4">
+                                <p class="label-for-user-banner mb-4 mb-hd-7">Фото шапки профиля</p>
+                                <div class="user-banner e-profile-banner mb-4 mb-hd-6">
+                                    <img src="assets/img/user-banner.png" alt="" id="user-banner">
+                                </div>
+        
+                                <label for="file-banner" class="input-load-banner">
+                                    Загрузить
+                                    <input type="file" id="file-banner" name="user-banner" accept="image/png, image/jpeg" />
+                                </label>
+                            </div>
+                            
+                            
+    
+                            <div class="profile-settings__personal-data">
+                                
+                                <div class="ps-avatar-block mb-4">
+                                    <h3 class="profile-settings__block-title f-avatar mb-5">Фото профиля</h3>
+                                    <div class="ps-avatar mb-4">
+                                        <div class=" ratio-img-1x1 rounded-round " >
+                                            <img src="assets/img/seller.png" alt="" id="avatar-img">
+                                        </div>
+                                    </div>
+                                    
+                                    <label for="file-avatar" class="input-load-avatar">
+                                        Загрузить
+                                        <input type="file" id="file-avatar" name="user-avatar" accept="image/png, image/jpeg" />
+                                    </label>
+
+
+                                    <div class="profile-btn-container mt-9 logout-desk">
+                                        <a class="btn btn-outline-orange border-1 py-xl-2 px-xl-5" href="/logout">Выход</a>
+                                    </div>
+                                </div>
+    
+    
+                                <div class="ps-main">
+                                    <h3 class="profile-settings__block-title ps-1 mb-4 mb-xl-6">Личные данные</h3>
+    
+                                    <div class="profile-bg rounded-2 px-4 py-4 py-lg-4 py-hd-6 px-lg-6 px-hd-7 mb-5">
+    
+                                        <label for="nickname" class="profile-label mb-2 mb-hd-4">Имя пользователя</label>
+                                        <label for="nickname" class="profile-sublabel mb-3 mb-hd-4">Ваше уникальное имя пользователя отображается в FimdePrompt </label>
+    
+                                        <input type="text" class="profile-input" id="nickname" name="nickname" placeholder="Имя пользователя" value="@username" required minlength="8">
+                                    </div>
+    
+                                    <div class="profile-bg rounded-2 px-4 py-4 py-lg-4 py-hd-6 px-lg-6 px-hd-7 mb-5">
+                                        <label for="user-about-us" class="profile-label mb-2 mb-hd-4">О себе</label>
+                                        <label for="user-about-us" class="profile-sublabel mb-3 mb-hd-4">Расскажите о себе</label>
+                                        <textarea name="user-about-us" id="user-about-us" class="profile-textarea">Welcome!😉 I'm a prompt engineer and explorer of the big world of AI.👨‍💻 If you're looking to automate your business processes and make your life easier.</textarea>
+                                    </div>
+    
+                                    <div class="profile-bg rounded-2 px-4 py-4 py-lg-4 py-hd-6 px-lg-6 px-hd-7 mb-5">
+                                        <p class="profile-label mb-2 mb-hd-4">Сменить пароль</p>
+    
+                                        <div class="profile-btn-container">
+                                            <a href="change-password.html" class="btn btn-outline-orange border-1 py-xl-2 px-xl-5">Изменить</a>
+                                        </div>
+                                    </div>
+    
+                                    <div class="profile-bg rounded-2 px-4 py-4 py-lg-4 py-hd-6 px-lg-6 px-hd-7 mb-5">
+    
+                                        <label for="email" class="profile-label mb-2 mb-hd-4">Смена адреса электронной почты</label>
+                                        <label for="email" class="profile-sublabel mb-3 mb-hd-4">Ссылка для подтверждения почты будет отправлена  на новый адрес</label>
+    
+                                        <input type="email" class="profile-input" id="email" name="email" placeholder="Имя пользователя" required value="username@gmail.com">
+                                    </div>
+                                </div>
+
+                                <div class="profile-btn-container mb-5 save-sm">
+                                    <button class="btn btn-outline-orange border-1">Сохранить изменения</button>
+                                </div>
+                                
+                                <div class="remove-account-block px-4 py-4 py-lg-5 py-hd-7 px-lg-5 px-hd-7 rounded-2">
+                                    <p  class="profile-label mb-4">Удалить учетную запись</p>
+                                    <p  class="profile-sublabel mb-6">Как только вы удалите свою учетную запись, пути назад уже не будет, пожалуйста, будьте уверены.</p>
+                                    <div class="profile-btn-container">
+                                        <span class="btn btn-outline-orange border-1 px-xl-5 py-xl-1" data-hystmodal="#remove-account">Удалить аккаунт</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-btn-container mt-7 mob">
+                            <a class="btn btn-outline-orange border-1" href="/logout">Выход</a>
+                        </div>
+
+                        <div class="profile-btn-container save-large mt-6">
+                            <button class="btn btn-outline-orange border-1 px-4 py-xl-2">Сохранить изменения</button>
+                        </div>
+                    </form>
+
+                    <form enctype="multipart/form-data" method="post" class="profile-settings__sheet">
+                        <div class="profile-settings__inner-sheet px-4 py-5 py-md-7  py-xl-5 px-md-6  px-hd-12">
+                            
+                            <div class="profile-checks-options-list">
+                                <div class="profile-checks-title-line mb-xl-2">
+                                    <p>Настройки уведомлений</p>
+                                    <p class="text-center">E-mail</p>
+                                    <p class="text-center">Уведомления</p>
+                                </div>
+    
+                                <div class="profile-checks-line">
+                                    <p>Новые продажи</p>
+                                    <div class="profile-checkbox-container">
+                                        <label for="sales-email" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="sales-notice" id="sales-email" value="email"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>
+                                        </label>
+                                    </div>
+                                    <div class="profile-checkbox-container">
+                                        <label for="sales-alert" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="sales-notice" id="sales-alert" value="alert"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                        </label>
+                                    </div>
+    
+    
+                                </div>
+                                <div class="profile-checks-line">
+                                    <p>Новые лайки</p>
+                                    <div class="profile-checkbox-container">
+                                        <label for="likes-email" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="likes-notice" id="likes-email" value="email"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>
+                                        </label>
+                                    </div>
+                                    <div class="profile-checkbox-container">
+                                        <label for="likes-alert" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="likes-notice" id="likes-alert" value="alert"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                                <div class="profile-checks-line">
+                                    <p>Новые подписчики</p>
+                                    <div class="profile-checkbox-container">
+                                        <label for="subscribers-email" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="subscribers-notice" id="subscribers-email" value="email"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                    <div class="profile-checkbox-container">
+                                        <label for="subscribers-alert" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="subscribers-notice" id="subscribers-alert" value="alert"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="profile-checks-line">
+                                    <p>Новый отзыв</p>
+                                    <div class="profile-checkbox-container">
+                                        <label for="review-email" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="review-notice" id="review-email" value="email"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                    <div class="profile-checkbox-container">
+                                        <label for="review-alert" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="review-notice" id="review-alert" value="alert"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                                <div class="profile-checks-line">
+                                    <p>Напоминание оставить отзыв</p>
+                                    <div class="profile-checkbox-container">
+                                        <label for="review-memo-email" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="review-memo" id="review-memo-email" value="email"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                    <div class="profile-checkbox-container">
+                                        <label for="review-memo-alert" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="review-memo" id="review-memo-alert" value="alert"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="profile-checks-line">
+                                    <p>Ответ на отзыв</p>
+                                    <div class="profile-checkbox-container">
+                                        <label for="review-answer-email" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="review-answer" id="review-answer-email" value="email"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                    <div class="profile-checkbox-container">
+                                        <label for="review-answer-alert" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="review-answer" id="review-answer-alert" value="alert"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="profile-checks-line">
+                                    <p>Новые запросы от избранного пользователя</p>
+                                    <div class="profile-checkbox-container">
+                                        <label for="new-query-email" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="new-query" id="new-query-email" value="email"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                    <div class="profile-checkbox-container">
+                                        <label for="new-query-alert" class="custom-filter-checkbox">
+                                            <input type="checkbox" name="new-query" id="new-query-alert" value="alert"  class="custom-filter-checkbox__checkbox" >
+                                            <span class="v-checkbox profile-checkbox"></span>                                                                                             
+                                            
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="profile-btn-container mt-10">
+                            <button class="btn btn-outline-orange border-1 px-6 mx-sm-auto">Сохранить изменения</button>
+                        </div>
+                    </form>
+
+                    
+                    
+                </div>
+
+
+
+            </div>
+
+        </section>
+
+        
+    </main>
+
+
+
+    <div class="hystmodal" id="remove-account" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window remove-account" role="dialog" aria-modal="true">                
+                <h1 class="title no-underline mb-5 mb-lg-6 mb-hd-9">Вы дейстивтельно хотите удалить профиль? </h1>
+                <button class="btn btn-danger border-1 w-100 mb-5 mb-hd-7" data-remove-account>Удалить</button>
+                <button class="btn btn-white border-1 w-100" data-hystclose>Отмена</button>
+            </div>
+        </div>
+    </div>
+    
+    
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__logo-block">
+                <a href="index.html" class="footer__logo"><img src="assets/img/logo.svg" alt=""></a>
+
+
+                <div class="footer__contact">
+                    
+                    <a href="mailto:info@findprompt.com">
+                        <svg width="16" height="16" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_801_18503)">
+                            <path d="M9.5 19C8.20167 19 6.97458 18.7505 5.81875 18.2514C4.66292 17.7523 3.65338 17.0715 2.79015 16.2089C1.92755 15.3463 1.24672 14.3371 0.747651 13.1812C0.248584 12.0254 -0.000632129 10.7983 1.20406e-06 9.5C1.20406e-06 8.18583 0.249535 6.95463 0.748601 5.8064C1.24767 4.65817 1.9285 3.65307 2.7911 2.7911C3.6537 1.92787 4.6626 1.24703 5.8178 0.7486C6.973 0.250167 8.2004 0.000633333 9.5 0C10.8142 0 12.0454 0.249533 13.1936 0.7486C14.3418 1.24767 15.3469 1.9285 16.2089 2.7911C17.0721 3.6537 17.753 4.65912 18.2514 5.80735C18.7498 6.95558 18.9994 8.18647 19 9.5V10.8775C19 11.8117 18.6795 12.6074 18.0386 13.2648C17.3977 13.9222 16.6098 14.2506 15.675 14.25C15.105 14.25 14.5746 14.1233 14.0837 13.87C13.5929 13.6167 13.1892 13.2842 12.8725 12.8725C12.445 13.3 11.9421 13.6366 11.3639 13.8823C10.7857 14.1281 10.1644 14.2506 9.5 14.25C8.18583 14.25 7.06547 13.7867 6.1389 12.8601C5.21233 11.9336 4.74937 10.8135 4.75 9.5C4.75 8.18583 5.21328 7.06547 6.13985 6.1389C7.06642 5.21233 8.18647 4.74937 9.5 4.75C10.8142 4.75 11.9345 5.21328 12.8611 6.13985C13.7877 7.06642 14.2506 8.18647 14.25 9.5V10.8775C14.25 11.3367 14.3925 11.6967 14.6775 11.9576C14.9625 12.2186 15.295 12.3494 15.675 12.35C16.055 12.35 16.3875 12.2192 16.6725 11.9576C16.9575 11.6961 17.1 11.336 17.1 10.8775V9.5C17.1 7.42583 16.3517 5.64047 14.8551 4.1439C13.3586 2.64733 11.5735 1.89937 9.5 1.9C7.42583 1.9 5.64047 2.64828 4.1439 4.14485C2.64733 5.64142 1.89937 7.42647 1.9 9.5C1.9 11.5742 2.64828 13.3595 4.14485 14.8561C5.64142 16.3527 7.42647 17.1006 9.5 17.1H14.25V19H9.5ZM9.5 12.35C10.2917 12.35 10.9646 12.0729 11.5187 11.5187C12.0729 10.9646 12.35 10.2917 12.35 9.5C12.35 8.70833 12.0729 8.03542 11.5187 7.48125C10.9646 6.92708 10.2917 6.65 9.5 6.65C8.70833 6.65 8.03542 6.92708 7.48125 7.48125C6.92708 8.03542 6.65 8.70833 6.65 9.5C6.65 10.2917 6.92708 10.9646 7.48125 11.5187C8.03542 12.0729 8.70833 12.35 9.5 12.35Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_801_18503">
+                            <rect width="19" height="19" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg> 
+                        info@findprompt.com
+                    </a>
+                </div>
+            </div>
+
+            <nav class="footer__nav">
+                <div class="footer__navigation-col">
+                    <h3 class="footer__col-title">Нейросети</h3>
+                    <ul class="footer__link-list">
+                        <li><a href="#" class="active">DALL·E</a></li>
+                        <li><a href="#">Bard</a></li>
+                        <li><a href="#">Midjourney</a></li>
+                        <li><a href="#">Stable Diffusion</a></li>
+                        <li><a href="#">ChatGPT</a></li>
+                    </ul>
+                </div>
+                <div class="footer__navigation-col">
+                    <h3 class="footer__col-title">Категории</h3>
+                    <ul class="footer__link-list">
+                        <li><a href="#" >Арты Илюстрации</a></li>
+                        <li><a href="#">Лого и иконки</a></li>
+                        <li><a href="#">Графика и дизайн</a></li>
+                        <li><a href="#">Маркетинг бизнес</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer__navigation-col">
+                    <h3 class="footer__col-title">Компания</h3>
+                    <ul class="footer__link-list">
+                        <li><a href="user-agreement.html">Пользовательское соглашение</a></li>
+                        <li><a href="privacy-politic.html">Политика конфиденциальности</a></li>
+                        <li><a href="faq.html">FaQ</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="footer__bottom">
+            2023 Все права защищены
+        </div>
+    </footer>
+
+
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/tippy-bundle.umd.min.js"></script>
+    <script src="assets/js/anime.min.js"></script>
+    <script src="assets/js/nouislider.min.js"></script>
+    <script src="assets/js/choices.min.js"></script>
+    <script src="assets/js/imask.js"></script>
+    <script src="assets/js/hystmodal.min.js"></script>
+    <script src="assets/js/fancybox.umd.js"></script>
+    <script src="assets/js/main.js" ></script>
+</body>
+</html>

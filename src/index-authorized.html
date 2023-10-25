@@ -1,0 +1,1334 @@
+@@include('templates/head.html')
+
+
+    <section class="hero">
+        @@include('templates/header-index-authorized.html')
+        <div class="hero__content">
+            
+            
+
+
+            <picture>
+                <source srcset="assets/img/hero-decoration-hdx2.png" media="(min-width: 1600px)" />                
+                <img src="assets/img/hero-decorationx3.png" alt="" class="hero__decoration">
+            </picture>
+            <div class="hero__content--inner">
+                <div class="hero__text-block">
+                    <h1 class="hero__title">Find prompt what you need, in one place</h1>
+                    <h3 class="hero__subtitle">Midjourney, Stable Diffusion, DALL-E,<br/> ChatGPT, Bard</h3>
+
+                    <div class="hero__links-block">
+                        <a href="#" class="btn btn-orange">Найти запрос</a>
+                        <a href="#" class="btn btn-white">Продать запрос</a>
+                    </div>
+                </div>
+
+                <form class="h-form">
+                    <div class="h-form__input-wrap">
+                        <input type="text" class="h-form__input" name="s" placeholder="Поиск">
+                        <button class="h-form__submit">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_801_18105)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1901 15.4778L23.6458 21.9335C23.8727 22.1605 24.0001 22.4684 24 22.7895C23.9999 23.1105 23.8723 23.4183 23.6452 23.6452C23.4181 23.8721 23.1102 23.9995 22.7892 23.9994C22.4682 23.9993 22.1604 23.8717 21.9335 23.6446L15.4778 17.1889C13.5479 18.6836 11.1211 19.387 8.69104 19.156C6.26097 18.925 4.01018 17.7769 2.39656 15.9453C0.782936 14.1137 -0.0723147 11.7361 0.00479537 9.29632C0.0819054 6.85651 1.08558 4.53771 2.81165 2.81165C4.53771 1.08558 6.85651 0.0819054 9.29632 0.00479537C11.7361 -0.0723147 14.1137 0.782936 15.9453 2.39656C17.7769 4.01018 18.925 6.26097 19.156 8.69104C19.387 11.1211 18.6836 13.5479 17.1889 15.4778H17.1901ZM9.60045 16.7989C11.5099 16.7989 13.3412 16.0404 14.6914 14.6902C16.0416 13.34 16.8001 11.5087 16.8001 9.59925C16.8001 7.68978 16.0416 5.85851 14.6914 4.50831C13.3412 3.15812 11.5099 2.39958 9.60045 2.39958C7.69098 2.39958 5.85971 3.15812 4.50951 4.50831C3.15932 5.85851 2.40078 7.68978 2.40078 9.59925C2.40078 11.5087 3.15932 13.34 4.50951 14.6902C5.85971 16.0404 7.69098 16.7989 9.60045 16.7989Z" fill="black"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_801_18105">
+                                        <rect width="24" height="24" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg> 
+                        </button>
+                    </div>
+                    <div class="h-form__quick-queries">
+                        <button class="h-form__qq btn btn-white">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_801_18079)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.3251 12.8981L19.7048 18.2779C19.8939 18.4671 20.0001 18.7237 20 18.9912C19.9999 19.2587 19.8935 19.5152 19.7043 19.7043C19.5151 19.8934 19.2585 19.9996 18.991 19.9995C18.7235 19.9994 18.467 19.893 18.2779 19.7038L12.8981 14.3241C11.2899 15.5697 9.26759 16.1559 7.24253 15.9634C5.21748 15.7708 3.34182 14.8141 1.99713 13.2877C0.652446 11.7614 -0.0602623 9.7801 0.00399614 7.74693C0.0682545 5.71376 0.904653 3.78143 2.34304 2.34304C3.78143 0.904653 5.71376 0.0682545 7.74693 0.00399614C9.7801 -0.0602623 11.7614 0.652446 13.2877 1.99713C14.8141 3.34182 15.7708 5.21748 15.9634 7.24253C16.1559 9.26759 15.5697 11.2899 14.3241 12.8981H14.3251ZM8.00037 13.9991C9.5916 13.9991 11.1176 13.367 12.2428 12.2418C13.368 11.1166 14.0001 9.5906 14.0001 7.99937C14.0001 6.40815 13.368 4.88209 12.2428 3.75693C11.1176 2.63176 9.5916 1.99965 8.00037 1.99965C6.40915 1.99965 4.88309 2.63176 3.75793 3.75693C2.63276 4.88209 2.00065 6.40815 2.00065 7.99937C2.00065 9.5906 2.63276 11.1166 3.75793 12.2418C4.88309 13.367 6.40915 13.9991 8.00037 13.9991Z" fill="#E5580A"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_801_18079">
+                                        <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg> 
+                            Картина
+                        </button>
+                        <button class="h-form__qq btn btn-white">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_801_18079)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.3251 12.8981L19.7048 18.2779C19.8939 18.4671 20.0001 18.7237 20 18.9912C19.9999 19.2587 19.8935 19.5152 19.7043 19.7043C19.5151 19.8934 19.2585 19.9996 18.991 19.9995C18.7235 19.9994 18.467 19.893 18.2779 19.7038L12.8981 14.3241C11.2899 15.5697 9.26759 16.1559 7.24253 15.9634C5.21748 15.7708 3.34182 14.8141 1.99713 13.2877C0.652446 11.7614 -0.0602623 9.7801 0.00399614 7.74693C0.0682545 5.71376 0.904653 3.78143 2.34304 2.34304C3.78143 0.904653 5.71376 0.0682545 7.74693 0.00399614C9.7801 -0.0602623 11.7614 0.652446 13.2877 1.99713C14.8141 3.34182 15.7708 5.21748 15.9634 7.24253C16.1559 9.26759 15.5697 11.2899 14.3241 12.8981H14.3251ZM8.00037 13.9991C9.5916 13.9991 11.1176 13.367 12.2428 12.2418C13.368 11.1166 14.0001 9.5906 14.0001 7.99937C14.0001 6.40815 13.368 4.88209 12.2428 3.75693C11.1176 2.63176 9.5916 1.99965 8.00037 1.99965C6.40915 1.99965 4.88309 2.63176 3.75793 3.75693C2.63276 4.88209 2.00065 6.40815 2.00065 7.99937C2.00065 9.5906 2.63276 11.1166 3.75793 12.2418C4.88309 13.367 6.40915 13.9991 8.00037 13.9991Z" fill="#E5580A"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_801_18079">
+                                        <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg> 
+                            Пейзаж
+                        </button>
+                        <button class="h-form__qq btn btn-white">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_801_18079)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.3251 12.8981L19.7048 18.2779C19.8939 18.4671 20.0001 18.7237 20 18.9912C19.9999 19.2587 19.8935 19.5152 19.7043 19.7043C19.5151 19.8934 19.2585 19.9996 18.991 19.9995C18.7235 19.9994 18.467 19.893 18.2779 19.7038L12.8981 14.3241C11.2899 15.5697 9.26759 16.1559 7.24253 15.9634C5.21748 15.7708 3.34182 14.8141 1.99713 13.2877C0.652446 11.7614 -0.0602623 9.7801 0.00399614 7.74693C0.0682545 5.71376 0.904653 3.78143 2.34304 2.34304C3.78143 0.904653 5.71376 0.0682545 7.74693 0.00399614C9.7801 -0.0602623 11.7614 0.652446 13.2877 1.99713C14.8141 3.34182 15.7708 5.21748 15.9634 7.24253C16.1559 9.26759 15.5697 11.2899 14.3241 12.8981H14.3251ZM8.00037 13.9991C9.5916 13.9991 11.1176 13.367 12.2428 12.2418C13.368 11.1166 14.0001 9.5906 14.0001 7.99937C14.0001 6.40815 13.368 4.88209 12.2428 3.75693C11.1176 2.63176 9.5916 1.99965 8.00037 1.99965C6.40915 1.99965 4.88309 2.63176 3.75793 3.75693C2.63276 4.88209 2.00065 6.40815 2.00065 7.99937C2.00065 9.5906 2.63276 11.1166 3.75793 12.2418C4.88309 13.367 6.40915 13.9991 8.00037 13.9991Z" fill="#E5580A"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_801_18079">
+                                        <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg> 
+                            Логотипы
+                        </button>
+                        <button class="h-form__qq btn btn-white">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_801_18079)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.3251 12.8981L19.7048 18.2779C19.8939 18.4671 20.0001 18.7237 20 18.9912C19.9999 19.2587 19.8935 19.5152 19.7043 19.7043C19.5151 19.8934 19.2585 19.9996 18.991 19.9995C18.7235 19.9994 18.467 19.893 18.2779 19.7038L12.8981 14.3241C11.2899 15.5697 9.26759 16.1559 7.24253 15.9634C5.21748 15.7708 3.34182 14.8141 1.99713 13.2877C0.652446 11.7614 -0.0602623 9.7801 0.00399614 7.74693C0.0682545 5.71376 0.904653 3.78143 2.34304 2.34304C3.78143 0.904653 5.71376 0.0682545 7.74693 0.00399614C9.7801 -0.0602623 11.7614 0.652446 13.2877 1.99713C14.8141 3.34182 15.7708 5.21748 15.9634 7.24253C16.1559 9.26759 15.5697 11.2899 14.3241 12.8981H14.3251ZM8.00037 13.9991C9.5916 13.9991 11.1176 13.367 12.2428 12.2418C13.368 11.1166 14.0001 9.5906 14.0001 7.99937C14.0001 6.40815 13.368 4.88209 12.2428 3.75693C11.1176 2.63176 9.5916 1.99965 8.00037 1.99965C6.40915 1.99965 4.88309 2.63176 3.75793 3.75693C2.63276 4.88209 2.00065 6.40815 2.00065 7.99937C2.00065 9.5906 2.63276 11.1166 3.75793 12.2418C4.88309 13.367 6.40915 13.9991 8.00037 13.9991Z" fill="#E5580A"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_801_18079">
+                                        <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg> 
+                            Логотипы
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <main class="index-page">
+        
+        <section class="section brands-section">
+            <div class="swiper slider-brands">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="brand-slide">
+                            <div class="brand-slide__img-block">
+                                <img src="assets/img/brands/1.jpg" alt="">
+                            </div>
+
+                            <p class="brand-slide__brand-name">Stable Diff.</p>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="brand-slide">
+                            <div class="brand-slide__img-block">
+                                <img src="assets/img/brands/2.png" alt="">
+                            </div>
+                            <p class="brand-slide__brand-name">Stable Diff.</p>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="brand-slide">
+                            <div class="brand-slide__img-block">
+                                <img src="assets/img/brands/3.jpg" alt="">
+                            </div>
+                            <p class="brand-slide__brand-name">Stable Diff.</p>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="brand-slide">
+                            <div class="brand-slide__img-block">
+                                <img src="assets/img/brands/4.jpg" alt="">
+                            </div>
+                            <p class="brand-slide__brand-name">Stable Diff.</p>
+                        </a>
+                    </div>
+
+
+                    <div class="swiper-slide">
+                        <a href="#" class="brand-slide">
+                            <div class="brand-slide__img-block">
+                                <img src="assets/img/brands/5.png" alt="">
+                            </div>
+                            <p class="brand-slide__brand-name">Stable Diff.</p>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="title">Категории</h2>
+            <div class="grid-categories">
+                <a href="#" class="grid-categories__item item-1">
+                    <div class="grid-categories__img-container">
+                        <img src="assets/img/categories/1.png" alt="">
+                    </div>
+
+                    <p class="grid-categories__category-name">Иллюстрации</p>
+                </a>
+                <a href="#" class="grid-categories__item item-2">
+                    <div class="grid-categories__img-container">
+                        <img src="assets/img/categories/2.jpg" alt="">
+                    </div>
+
+                    <p class="grid-categories__category-name">Персонажи</p>
+                </a>
+                <a href="#" class="grid-categories__item item-3">
+                    <div class="grid-categories__img-container">
+                        <img src="assets/img/categories/3.png" alt="">
+                    </div>
+
+                    <p class="grid-categories__category-name">Пейзажи</p>
+                </a>
+
+                <a href="#" class="grid-categories__item item-4">
+                    <div class="grid-categories__img-container">
+                        <img src="assets/img/categories/4.png" alt="">
+                    </div>
+
+                    <p class="grid-categories__category-name">Портреты</p>
+                </a>
+
+                <a href="#" class="grid-categories__item item-5">
+                    <div class="grid-categories__img-container">
+                        <img src="assets/img/categories/2.jpg" alt="">
+                    </div>
+
+                    <p class="grid-categories__category-name">Абстракции</p>
+                </a>
+
+                <a href="#" class="grid-categories__item item-6">
+                    <div class="grid-categories__img-container">
+                        <img src="assets/img/categories/2.jpg" alt="">
+                    </div>
+
+                    <p class="grid-categories__category-name">Украшения</p>
+                </a>
+
+
+            </div>
+        </section>
+
+        <section class="section slider-section">
+            <div class="ss-content">
+                <h2 class="title">Самые популярные запросы</h2>
+            </div>
+
+            <div class="swiper products-slider">
+                <button class="big-slider-button prev products-slider__prev">
+                    <svg width="34" height="66" viewBox="0 0 34 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M34.0007 55.9336L12.7507 33L34.0007 10.0663L29.7507 0.892822L0.000732422 33L29.7507 65.1071L34.0007 55.9336Z" fill="white"/>
+                    </svg> 
+                </button>
+                <button class="big-slider-button next products-slider__next"> 
+                    <svg width="34" height="66" viewBox="0 0 34 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 55.9337L21.25 33L0 10.0664L4.25 0.892883L34 33L4.25 65.1072L0 55.9337Z" fill="white"/>
+                    </svg> 
+                </button>
+
+
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+                                        <img src="assets/img/catalog/green.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-blue">
+                                        <img src="assets/img/icons/categories/palette-outline.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">DALL·E</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+    
+                                        <div class="product-card-gallery">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/1.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/3.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/4.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            <div class="product-card-gallery__pagination">
+    
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-lilac">
+                                        <img src="assets/img/icons/categories/boat-line.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">Midjourney</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                            
+    
+    
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+    
+                                        <div class="product-card-gallery">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/1.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/3.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/4.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            <div class="product-card-gallery__pagination">
+    
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-violet">
+                                        <img src="assets/img/icons/categories/brush.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">Stable Diff.</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                            
+    
+    
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+                                        <img src="assets/img/catalog/pink.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-red">
+                                        <img src="assets/img/icons/categories/bard.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">Bard</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Написание рецептов</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+    
+                                        <div class="product-card-gallery">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/1.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/3.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/4.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            <div class="product-card-gallery__pagination">
+    
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-pink">
+                                        <img src="assets/img/icons/categories/chatGPT.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">ChatGPT</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                            
+    
+    
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+                                        <img src="assets/img/catalog/green.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-blue">
+                                        <img src="assets/img/icons/categories/palette-outline.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">DALL·E</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+    
+                                        <div class="product-card-gallery">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/1.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/3.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/4.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            <div class="product-card-gallery__pagination">
+    
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-lilac">
+                                        <img src="assets/img/icons/categories/boat-line.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">Midjourney</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                            
+    
+    
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+    
+                                        <div class="product-card-gallery">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/1.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/3.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/4.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            <div class="product-card-gallery__pagination">
+    
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-violet">
+                                        <img src="assets/img/icons/categories/brush.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">Stable Diff.</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                            
+    
+    
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section slider-section">
+            <div class="ss-content">
+                <h2 class="title">Рекомендуемые запросы</h2>
+            </div>
+
+            <div class="swiper products-slider">
+                <button class="big-slider-button prev products-slider__prev">
+                    <svg width="34" height="66" viewBox="0 0 34 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M34.0007 55.9336L12.7507 33L34.0007 10.0663L29.7507 0.892822L0.000732422 33L29.7507 65.1071L34.0007 55.9336Z" fill="white"/>
+                    </svg> 
+                </button>
+                <button class="big-slider-button next products-slider__next"> 
+                    <svg width="34" height="66" viewBox="0 0 34 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 55.9337L21.25 33L0 10.0664L4.25 0.892883L34 33L4.25 65.1072L0 55.9337Z" fill="white"/>
+                    </svg> 
+                </button>
+
+
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+                                        <img src="assets/img/catalog/green.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-blue">
+                                        <img src="assets/img/icons/categories/palette-outline.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">DALL·E</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+    
+                                        <div class="product-card-gallery">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/1.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/3.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/4.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            <div class="product-card-gallery__pagination">
+    
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-lilac">
+                                        <img src="assets/img/icons/categories/boat-line.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">Midjourney</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                            
+    
+    
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+    
+                                        <div class="product-card-gallery">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/1.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/3.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/4.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            <div class="product-card-gallery__pagination">
+    
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-violet">
+                                        <img src="assets/img/icons/categories/brush.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">Stable Diff.</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                            
+    
+    
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+                                        <img src="assets/img/catalog/pink.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-red">
+                                        <img src="assets/img/icons/categories/bard.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">Bard</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Написание рецептов</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+    
+                                        <div class="product-card-gallery">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/1.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/3.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/4.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            <div class="product-card-gallery__pagination">
+    
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-pink">
+                                        <img src="assets/img/icons/categories/chatGPT.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">ChatGPT</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                            
+    
+    
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+                                        <img src="assets/img/catalog/green.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-blue">
+                                        <img src="assets/img/icons/categories/palette-outline.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">DALL·E</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+    
+                                        <div class="product-card-gallery">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/1.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/3.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/4.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            <div class="product-card-gallery__pagination">
+    
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-lilac">
+                                        <img src="assets/img/icons/categories/boat-line.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">Midjourney</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                            
+    
+    
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+    
+                                        <div class="product-card-gallery">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/1.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/3.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/4.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            <div class="product-card-gallery__pagination">
+    
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-violet">
+                                        <img src="assets/img/icons/categories/brush.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">Stable Diff.</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                            
+    
+    
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section slider-section">
+            <div class="ss-content">
+                <h2 class="title">Новейшие запросы</h2>
+            </div>
+
+            <div class="swiper products-slider">
+                <button class="big-slider-button prev products-slider__prev">
+                    <svg width="34" height="66" viewBox="0 0 34 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M34.0007 55.9336L12.7507 33L34.0007 10.0663L29.7507 0.892822L0.000732422 33L29.7507 65.1071L34.0007 55.9336Z" fill="white"/>
+                    </svg> 
+                </button>
+                <button class="big-slider-button next products-slider__next"> 
+                    <svg width="34" height="66" viewBox="0 0 34 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 55.9337L21.25 33L0 10.0664L4.25 0.892883L34 33L4.25 65.1072L0 55.9337Z" fill="white"/>
+                    </svg> 
+                </button>
+
+
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+                                        <img src="assets/img/catalog/green.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-blue">
+                                        <img src="assets/img/icons/categories/palette-outline.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">DALL·E</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+    
+                                        <div class="product-card-gallery">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/1.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/3.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/4.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            <div class="product-card-gallery__pagination">
+    
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-lilac">
+                                        <img src="assets/img/icons/categories/boat-line.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">Midjourney</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                            
+    
+    
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+    
+                                        <div class="product-card-gallery">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/1.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/3.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/4.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            <div class="product-card-gallery__pagination">
+    
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-violet">
+                                        <img src="assets/img/icons/categories/brush.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">Stable Diff.</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                            
+    
+    
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+                                        <img src="assets/img/catalog/pink.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-red">
+                                        <img src="assets/img/icons/categories/bard.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">Bard</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Написание рецептов</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+    
+                                        <div class="product-card-gallery">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/1.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/3.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/4.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            <div class="product-card-gallery__pagination">
+    
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-pink">
+                                        <img src="assets/img/icons/categories/chatGPT.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">ChatGPT</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                            
+    
+    
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+                                        <img src="assets/img/catalog/green.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-blue">
+                                        <img src="assets/img/icons/categories/palette-outline.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">DALL·E</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+    
+                                        <div class="product-card-gallery">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/1.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/3.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/4.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            <div class="product-card-gallery__pagination">
+    
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-lilac">
+                                        <img src="assets/img/icons/categories/boat-line.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">Midjourney</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                            
+    
+    
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="product-card" href="#">
+
+                            <div class="prop-container-100">
+                                <div class="prop-container-100__inner">
+                                    <div class="prop-container-100__content">
+    
+                                        <div class="product-card-gallery">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/1.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/3.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/4.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/catalog/2.png" alt="">
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            <div class="product-card-gallery__pagination">
+    
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__text-content">
+                                <div class="product-card__info-labels">
+                                    <div class="product-card__rating-label">
+                                        <img src="assets/img/icons/white-star.svg" alt="" class="product-card__rating-icon" width="14" height="14">
+                                        <span class="product-card__rating-value">5.0</span>
+                                    </div>
+                                    <div class="product-card__category-label bg-violet">
+                                        <img src="assets/img/icons/categories/brush.svg" alt="" class="product-card__category-icon">
+                                        <span class="product-card__category-name">Stable Diff.</span>
+                                    </div>
+                                </div>
+                                <p class="product-card__product-name">Pastel 3D Origami Paper For Children</p>
+                                <p class="product-card__price">2.99 $</p>
+                            </div>
+                            
+    
+    
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+@@include('templates/footer.html')
+    
+
+
+
+    
